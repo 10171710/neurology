@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Specialist Doctors & Neurologists Directory | NeuroCare</title>
+  <meta name="description" content="Meet our board-certified, fellowship-trained neurologists specializing in chronic migraine, concussion recovery, video EEG neurophysiology, and pediatric neurology.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            neuro: {
+              blue: '#0284c7',
+              cyan: '#06b6d4',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Primary Navigation -->
+  <header class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
+          <div>
+            <span class="text-sm font-semibold tracking-tight text-white">
+              Neuro<span class="text-teal-400">Care</span>
+            </span>
+            <span class="block text-sm font-semibold uppercase tracking-wider text-white">Neurology &amp; Headache Clinic</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center gap-1 lg:gap-2">
+          
+          <!-- Home Dropdown -->
+          <div class="relative" id="desktopHomeDropdown">
+            <button type="button" class="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div id="desktopHomeMenu" class="hidden absolute top-full left-0 w-64 mt-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 z-50">
+              <a href="index.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-teal-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-sm transition-colors">
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white">Home 1: Clinic Landing</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">General Neurology & Headache</div>
+                </div>
+              </a>
+              <a href="index-2.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-sm transition-colors mt-1">
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white">Home 2: Neuro-Tech & Rehab</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">Concussion, Apps & Telehealth</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- About (No Dropdown) -->
+          <a href="about.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            About
+          </a>
+
+          <!-- Services (No Dropdown) -->
+          <a href="services.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Services
+          </a>
+
+          <!-- Doctors (No Dropdown - Active on this page) -->
+          <a href="doctors.html" class="px-3 py-2 text-sm font-bold text-teal-400 bg-slate-800/80 rounded-lg transition-all">
+            Doctors
+          </a>
+
+          <!-- Pricing (No Dropdown) -->
+          <a href="pricing.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Pricing
+          </a>
+
+          <!-- Blog (No Dropdown) -->
+          <a href="blog.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Blog
+          </a>
+
+          <!-- Contact (No Dropdown) -->
+          <a href="contact.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Contact
+          </a>
+
+          <!-- Dashboard (No Toggle/Dropdown - Direct Link) -->
+          <a href="dashboard.html" class="px-3 py-2 text-sm font-medium text-teal-400 hover:text-sky-300 rounded-lg hover:bg-slate-800/60 transition-all">
+            Dashboard
+          </a>
+        </nav>
+
+        <!-- Right Side Controls -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          
+          <!-- RTL / LTR Toggle Button -->
+          <button type="button" onclick="toggleRTL()" title="Switch Text Direction (LTR/RTL)" class="px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors flex items-center justify-center">
+            <span class="rtl-indicator">LTR</span>
+          </button>
+
+          <!-- Dark / Light Theme Toggle -->
+          <button type="button" onclick="toggleTheme()" title="Toggle Dark/Light Mode" class="p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors">
+            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-teal-400"></i>
+          </button>
+
+          <!-- Single Line Login CTA -->
+          <a href="login.html" class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+            <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-xl border border-slate-700 text-slate-200 hover:bg-slate-800">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenu" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm">
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-slate-900 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-8 h-8 flex-shrink-0">
+            <span class="font-bold text-lg text-white">NeuroCare</span>
+          </div>
+          <button id="mobileMenuClose" class="p-1.5 rounded-lg text-slate-400 hover:bg-slate-800">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <nav class="mt-6 flex flex-col gap-1">
+          <div>
+            <button id="mobileHomeDropdownBtn" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
+              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home Demos</span>
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div id="mobileHomeDropdownMenu" class="hidden pl-6 pr-2 py-1 flex flex-col gap-1 border-l-2 border-teal-500/30 ml-4 mt-1">
+              <a href="index.html" class="py-2 text-sm text-slate-300 font-medium hover:text-teal-400">Home 1: Clinic Landing</a>
+              <a href="index-2.html" class="py-2 text-sm text-slate-300 font-medium hover:text-teal-400">Home 2: Neuro-Tech & Rehab</a>
+            </div>
+          </div>
+
+          <a href="about.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">About</a>
+          <a href="services.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Services</a>
+          <a href="doctors.html" class="px-3 py-2.5 rounded-xl font-semibold bg-slate-800 text-teal-400 text-sm">Doctors</a>
+          <a href="pricing.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Pricing</a>
+          <a href="blog.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Blog</a>
+          <a href="contact.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Contact</a>
+          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
+            Dashboard
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+        <a href="login.html" class="w-full text-center py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[580px] lg:min-h-[640px] flex items-center justify-center py-20 lg:py-28 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white overflow-hidden border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+    <!-- Neurology & Headache Clinical Faculty Background Image with High-Clarity Dual-Theme Overlays -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <img src="https://anest.ufl.edu/wordpress/files/2019/04/neuro-flyer-smaller-edit2.jpg" onerror="this.onerror=null;this.src='assets/images/facilities/neuro-anesthesiology-faculty-hero.jpg'" alt="NeuroCare Specialist Doctors and Headache Specialists" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-95 transition-all duration-700">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/45 via-slate-50/20 to-slate-50/50 transition-colors duration-300"></div>
+    </div>
+
+    <div class="hero-onimage relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 sm:space-y-8">
+      
+      <!-- Eyebrow Badge -->
+      <div>
+        <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/95 dark:bg-slate-900/95 border border-teal-500/40 text-xs sm:text-sm font-extrabold text-teal-900 dark:text-teal-200 shadow-sm backdrop-blur-md">Neurology &amp; Headache Faculty</span>
+      </div>
+
+      <!-- Main Headline with Highlight -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)] leading-[1.15] max-w-4xl mx-auto">
+        Fellowship-Trained <span class="bg-gradient-to-r from-teal-800 to-sky-800 dark:from-teal-300 dark:to-sky-300 bg-clip-text text-transparent font-black">Neurologists &amp; Headache Specialists</span>
+      </h1>
+
+      <!-- Lead Paragraph -->
+      <p class="text-base sm:text-lg text-slate-900 max-w-2xl mx-auto leading-relaxed font-semibold drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)] text-slate-900">
+        Meet our board-certified clinical faculty dedicating their careers to chronic migraine, concussion recovery, intractable neuropathic pain, and interventional neurophysiology.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <a href="contact.html#appointment-request" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-sm shadow-xl shadow-teal-600/25 transition-all hover:scale-105 active:scale-95">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book an Appointment</span>
+        </a>
+        <a href="services.html#services-grid" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-950 dark:text-white font-bold shadow-md text-sm backdrop-blur-md border border-slate-300 dark:border-slate-700 transition-all hover:scale-105">
+          <i data-lucide="activity" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i>
+          <span>Explore Treatments</span>
+        </a>
+      </div>
+
+      <!-- Prominent Stat Strip -->
+      <div class="pt-8 sm:pt-10 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)]" data-counter data-target="100" data-suffix="%">100%</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Board-certified MDs</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)]" data-counter data-target="6">6</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Dedicated subspecialties</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-600 dark:text-teal-400 tracking-tight" data-counter data-target="99.2" data-decimals="1" data-suffix="%">99.2%</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Positive patient rating</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)]" data-counter data-target="15" data-suffix="+">15+</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Years avg. experience</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Doctor Directory Filter & Grid Section (First Section) -->
+  <div id="specialists" class="scroll-mt-24"></div>
+  <div id="consult-specialist" class="scroll-mt-24"></div>
+  <section id="doctors-directory" class="scroll-mt-24 py-16 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Filter Bar & Search -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex flex-wrap gap-2">
+          <button data-filter="all" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-teal-700 text-white hover:bg-teal-800 shadow-sm transition-all">All Specialists (6)</button>
+          <button data-filter="headache" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">Chronic Migraine</button>
+          <button data-filter="concussion" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">Concussion & TBI</button>
+          <button data-filter="neurophysiology" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">EEG & Neurophysiology</button>
+          <button data-filter="pediatric" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">Pediatric Neurology</button>
+        </div>
+
+        <div class="relative w-full lg:w-72">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3 text-slate-400"></i>
+          <input type="text" id="searchDirectoryInput" placeholder="Search doctor by name or specialty..." class="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs sm:text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+      </div>
+
+      <!-- Doctors Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Doctor 1 -->
+        <div class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between" data-category="headache">
+          <div>
+            <div class="h-72 w-full card-img-container relative group">
+              <img src="assets/images/doctors/doctor-marcus-vance.jpg" alt="Portrait of Dr. Marcus Vance, MD - Chief Medical Officer and Headache Specialist" class="face-portrait group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Chief Medical Officer
+              </span>
+              <span class="absolute bottom-4 right-4 bg-emerald-500/95 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur shadow-sm">
+                Accepting New Patients
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dr. Marcus Vance, MD</h3>
+              <p class="text-xs font-semibold text-teal-600 dark:text-teal-400 mb-3">Headache Medicine & CGRP Infusion Lead</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3 mb-4">
+                <p class="flex items-center gap-2"><i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-teal-600"></i> Johns Hopkins University School of Medicine</p>
+                <p class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-teal-600"></i> Fellowship: Mayo Clinic Headache Center</p>
+                <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-600"></i> Seattle Main Clinic & Telehealth</p>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Specializes in refractory chronic migraine, trigeminal autonomic cephalalgias, and CGRP monoclonal antibody clinical infusion protocols. Over 18 years of clinical research experience.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="contact.html?doctor=Dr.+Marcus+Vance#appointment-request" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book with Dr. Vance
+            </a>
+          </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between" data-category="concussion">
+          <div>
+            <div class="h-72 w-full card-img-container relative group">
+              <img src="assets/images/doctors/doctor-elena-rostova.jpg" alt="Portrait of Dr. Alexander Rostov, MD, PhD - Director of Neuro-Trauma and Concussion Rehabilitation" class="face-portrait group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Director of Neuro-Trauma
+              </span>
+              <span class="absolute bottom-4 right-4 bg-emerald-500/95 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur shadow-sm">
+                Accepting New Patients
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dr. Alexander Rostov, MD, PhD</h3>
+              <p class="text-xs font-semibold text-teal-600 dark:text-teal-400 mb-3">Concussion & Vestibular Rehabilitation</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3 mb-4">
+                <p class="flex items-center gap-2"><i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-teal-600"></i> Stanford University School of Medicine</p>
+                <p class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-teal-600"></i> Fellowship: Mass General Neuro-Trauma Center</p>
+                <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-600"></i> Bellevue Neuro-Rehab Lab</p>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Expert in protracted post-concussion syndrome, athletic head injuries, computerized oculomotor convergence therapies, and autonomic exertional conditioning and balance.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="contact.html?doctor=Dr.+Alexander+Rostov#appointment-request" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book with Dr. Rostov
+            </a>
+          </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between" data-category="neurophysiology">
+          <div>
+            <div class="h-72 w-full card-img-container relative group">
+              <img src="assets/images/doctors/doctor-julian-hayes.jpg" alt="Portrait of Dr. Julian Hayes, MD - Chief of Neurophysiology and Video EEG Telemetry" class="face-portrait group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Chief of Neurophysiology
+              </span>
+              <span class="absolute bottom-4 right-4 bg-emerald-500/95 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur shadow-sm">
+                Accepting New Patients
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dr. Julian Hayes, MD</h3>
+              <p class="text-xs font-semibold text-teal-600 dark:text-teal-400 mb-3">EEG, Video Telemetry & Neuromonitoring</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3 mb-4">
+                <p class="flex items-center gap-2"><i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-teal-600"></i> Harvard Medical School</p>
+                <p class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-teal-600"></i> Fellowship: Brigham and Women's Hospital</p>
+                <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-600"></i> Seattle Diagnostic Suite</p>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Double board-certified in Neurology and Clinical Neurophysiology. Pioneering ambulatory 72-hour video EEG monitoring for distinguishing complicated migraine aura from seizure disorders.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="contact.html?doctor=Dr.+Julian+Hayes#appointment-request" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book with Dr. Hayes
+            </a>
+          </div>
+        </div>
+
+        <!-- Doctor 4 -->
+        <div class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between" data-category="headache">
+          <div>
+            <div class="h-72 w-full card-img-container relative group">
+              <img src="assets/images/doctors/doctor-priya-chawla.jpg" alt="Portrait of Dr. Priya Chawla, MD - Botox PREEMPT Protocol and Interventional Headache Specialist" class="face-portrait group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Interventional Specialist
+              </span>
+              <span class="absolute bottom-4 right-4 bg-emerald-500/95 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur shadow-sm">
+                Accepting New Patients
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dr. Priya Chawla, MD</h3>
+              <p class="text-xs font-semibold text-teal-600 dark:text-teal-400 mb-3">Botox (PREEMPT) & Interventional Nerve Blocks</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3 mb-4">
+                <p class="flex items-center gap-2"><i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-teal-600"></i> UCSF School of Medicine</p>
+                <p class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-teal-600"></i> Fellowship: Cleveland Clinic Headache Center</p>
+                <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-600"></i> Seattle Main Clinic</p>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Nationally recognized injector specializing in 31-point onabotulinumtoxinA protocols, ultrasound-guided greater occipital nerve blocks, and sphenopalatine ganglion blockade.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="contact.html?doctor=Dr.+Priya+Chawla#appointment-request" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book with Dr. Chawla
+            </a>
+          </div>
+        </div>
+
+        <!-- Doctor 5 -->
+        <div class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between" data-category="pediatric">
+          <div>
+            <div class="h-72 w-full card-img-container relative group">
+              <img src="assets/images/doctors/doctor-kenneth-wu.jpg" alt="Portrait of Dr. Kenneth Wu, MD - Pediatric Neurology and Adolescent Headache Chief" class="face-portrait group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Pediatric Chief
+              </span>
+              <span class="absolute bottom-4 right-4 bg-emerald-500/95 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur shadow-sm">
+                Accepting New Patients
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dr. Kenneth Wu, MD</h3>
+              <p class="text-xs font-semibold text-teal-600 dark:text-teal-400 mb-3">Pediatric Neurology & Adolescent Headache</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3 mb-4">
+                <p class="flex items-center gap-2"><i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-teal-600"></i> Columbia University Vagelos College of P&S</p>
+                <p class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-teal-600"></i> Fellowship: Boston Children's Hospital</p>
+                <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-600"></i> Seattle Pediatric Wing & Telehealth</p>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Dedicated to managing cyclical vomiting syndrome, pediatric migraine equivalents, abdominal migraines, and youth post-sports concussion recovery with gentle lifestyle and non-pharmaceutical interventions.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="contact.html?doctor=Dr.+Kenneth+Wu#appointment-request" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book with Dr. Wu
+            </a>
+          </div>
+        </div>
+
+        <!-- Doctor 6 -->
+        <div class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between" data-category="headache neurophysiology">
+          <div>
+            <div class="h-72 w-full card-img-container relative group">
+              <img src="assets/images/doctors/doctor-sarah-lin.jpg" alt="Portrait of Dr. Sarah Lin, MD - Neuro-Ophthalmology and Visual Aura Specialist" class="face-portrait group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                Neuro-Ophthalmologist
+              </span>
+              <span class="absolute bottom-4 right-4 bg-emerald-500/95 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur shadow-sm">
+                Accepting New Patients
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dr. Sarah Lin, MD</h3>
+              <p class="text-xs font-semibold text-teal-600 dark:text-teal-400 mb-3">Neuro-Ophthalmology & Visual Aura</p>
+              
+              <div class="space-y-2 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3 mb-4">
+                <p class="flex items-center gap-2"><i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-teal-600"></i> Yale School of Medicine</p>
+                <p class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-teal-600"></i> Fellowship: Wilmer Eye Institute (Johns Hopkins)</p>
+                <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-600"></i> Seattle Main Clinic</p>
+              </div>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Specializes in complex retinal migraine, ocular photophobia, pseudotumor cerebri (idiopathic intracranial hypertension), and optic neuritis distinguishing cranial pain from visual pathways.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="contact.html?doctor=Dr.+Sarah+Lin#appointment-request" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book with Dr. Lin
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Multidisciplinary Care Model -->
+  <section class="py-16 sm:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800/80 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="users" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400"></i> Integrated Medical Board
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          How Our Specialists Collaborate for Your Care
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+          No complex headache or neurological condition is treated in isolation. Our clinical faculty convenes weekly multidisciplinary case conferences to formulate coordinated, evidence-backed treatment plans.
+        </p>
+      </div>
+
+      <!-- 4-Pillar Collaborative Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="relative p-7 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:border-teal-500/40 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-full h-40 rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.pexels.com/photos/7089017/pexels-photo-7089017.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern MRI scanner used for unified neurological diagnostics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <span class="text-[11px] font-bold text-teal-600 dark:text-teal-400 tracking-wider uppercase">Step 01</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2.5">Unified Diagnostics</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Video EEG telemetry, 3T high-resolution MRI, and automated biometric headache diary data are synthesized into a single clinical diagnostic dashboard before your consult.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-teal-700 dark:text-teal-400">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500"></i> Zero duplicated testing
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative p-7 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:border-teal-500/40 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-full h-40 rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.pexels.com/photos/6129646/pexels-photo-6129646.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clinical faculty meeting for a weekly multidisciplinary case review" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <span class="text-[11px] font-bold text-teal-600 dark:text-teal-400 tracking-wider uppercase">Step 02</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2.5">Weekly Case Board</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Dr. Marcus Vance, Dr. Elena Rostova, and Dr. Julian Hayes cross-review treatment-resistant and atypical aura cases to ensure no rare etiology is overlooked by our faculty.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-teal-700 dark:text-teal-400">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500"></i> Peer-reviewed care plans
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative p-7 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:border-teal-500/40 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-full h-40 rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.pexels.com/photos/29648630/pexels-photo-29648630.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clinician preparing a targeted injection therapy for migraine treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <span class="text-[11px] font-bold text-teal-600 dark:text-teal-400 tracking-wider uppercase">Step 03</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2.5">Precision Modalities</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Targeted therapy combinations: quarterly CGRP infusion suites, PREEMPT Botox, ultrasound nerve blocks, and vagus nerve stimulation tailored to your phenotype.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-teal-700 dark:text-teal-400">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500"></i> Evidence-backed outcomes
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative p-7 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:border-teal-500/40 transition-all group flex flex-col justify-between">
+          <div>
+            <div class="w-full h-40 rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.pexels.com/photos/4266943/pexels-photo-4266943.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Neurologist reviewing biometric monitoring data with a patient on a tablet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <span class="text-[11px] font-bold text-teal-600 dark:text-teal-400 tracking-wider uppercase">Step 04</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1 mb-2.5">Proactive Monitoring</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Digital biometric headache diary syncs with your neurologist's clinical portal between visits, triggering timely dosage calibrations before severe breakthrough episodes strike.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200 dark:border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-teal-700 dark:text-teal-400">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-500"></i> Real-time clinical support
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust & Credential Banner -->
+      <div class="mt-14 p-6 sm:p-8 rounded-3xl bg-slate-900 text-white flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl border border-slate-800">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-base sm:text-lg text-white">Board-Certified Excellence Across All Subspecialties</h4>
+            <p class="text-xs sm:text-sm text-slate-400">Our physicians hold fellowships from Johns Hopkins, Mayo Clinic, Harvard, and Columbia University.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-teal-500/10 text-teal-200 text-xs font-semibold border border-teal-500/30">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> 100% Board Certified
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-teal-500/10 text-teal-200 text-xs font-semibold border border-teal-500/30">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> 48-Hour Urgent Triage
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-teal-500/10 text-teal-200 text-xs font-semibold border border-teal-500/30">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Active Research Faculty
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Patient Testimonials & Doctor Reviews -->
+  <section class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800/80 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="star" class="w-3.5 h-3.5 text-amber-500 fill-amber-500"></i> Verified Patient Reviews
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Patient Stories: Care in Action
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-xl mx-auto">
+          Hear directly from patients whose chronic migraines, concussions, and severe cephalic conditions were resolved under our specialists' care.
+        </p>
+        <div class="inline-flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm mt-8 text-left">
+          <div class="text-3xl font-extrabold text-slate-900 dark:text-white flex items-center gap-1">
+            4.9 <span class="text-amber-500 text-xl">★</span>
+          </div>
+          <div class="text-xs text-slate-500 dark:text-slate-400">
+            <span class="font-bold text-slate-800 dark:text-slate-200 block text-sm">Overall Doctor Rating</span>
+            Based on 1,280+ verified clinical appointments
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1: Dr. Marcus Vance -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <!-- Star Rating -->
+            <div class="flex items-center gap-1 text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <span class="text-xs font-bold text-slate-600 dark:text-slate-400 ml-2">5.0</span>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic mb-6">
+              "After 14 years of refractory migraines and countless failed ER visits, Dr. Marcus Vance mapped my specific CGRP trigger profile and initiated quarterly infusion therapy. I have gone from 22 headache days a month down to just 3. His thoroughness gave me my life back."
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full overflow-hidden shrink-0 ring-2 ring-teal-500/40 shadow-sm">
+              <img src="assets/images/testimonials/patient-rachel.jpg" alt="Rachel M., migraine patient" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900 dark:text-white">Rachel M.</h5>
+              <p class="text-xs text-teal-600 dark:text-teal-400 font-medium">Treated by Dr. Marcus Vance, MD · CGRP Infusions</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Dr. Elena Rostova -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <span class="text-xs font-bold text-slate-600 dark:text-slate-400 ml-2">5.0</span>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic mb-6">
+              "I suffered from protracted post-concussion syndrome and severe vestibular dizziness for 8 months following a cycling crash. Dr. Elena Rostova designed an active oculomotor convergence program and exertional rehab that finally cleared my brain fog completely."
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full overflow-hidden shrink-0 ring-2 ring-sky-500/40 shadow-sm">
+              <img src="assets/images/testimonials/patient-david.jpg" alt="David K., concussion patient" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900 dark:text-white">David K.</h5>
+              <p class="text-xs text-sky-600 dark:text-sky-400 font-medium">Treated by Dr. Elena Rostova, MD, PhD · Neuro-Trauma</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Dr. Priya Chawla -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <span class="text-xs font-bold text-slate-600 dark:text-slate-400 ml-2">5.0</span>
+            </div>
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed italic mb-6">
+              "Dr. Priya Chawla's precision with the 31-point PREEMPT Botox injections is remarkable. The procedure was virtually painless, and for the first time in years, I can look at a computer screen without triggering debilitating occipital throbbing. Outstanding bedside care."
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full overflow-hidden shrink-0 ring-2 ring-rose-500/40 shadow-sm">
+              <img src="assets/images/testimonials/patient-lauren.jpg" alt="Lauren T., Botox protocol patient" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-slate-900 dark:text-white">Lauren T.</h5>
+              <p class="text-xs text-rose-600 dark:text-rose-400 font-medium">Treated by Dr. Priya Chawla, MD · Botox PREEMPT Protocol</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Consultation FAQs & VIP Appointment CTA Banner -->
+  <section class="py-16 sm:py-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- FAQ Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800/80 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400"></i> Patient Guidance
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Frequently Asked Questions About Seeing Our Specialists
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
+          Everything you need to know about booking, medical referrals, record transfers, and telehealth appointments.
+        </p>
+      </div>
+
+      <!-- FAQ Accordion List -->
+      <div class="max-w-3xl mx-auto space-y-4 mb-16">
+        
+        <details class="group p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 dark:text-white text-base">
+            <span>Do I need a primary care physician referral to see a neurologist?</span>
+            <span class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-200/80 dark:border-slate-800 pt-4">
+            Most commercial PPO plans and self-pay patients do not require a formal physician referral to book directly with our neurologists. If you have an HMO plan, our clinical intake coordination desk can assist your primary care office in submitting a rapid referral and prior authorization.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 dark:text-white text-base">
+            <span>What records or imaging scans should I bring to my first appointment?</span>
+            <span class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-200/80 dark:border-slate-800 pt-4">
+            Please bring any prior brain or cervical MRI/CT radiology reports (and DICOM discs if available), a list of past preventative and acute medications tried, recent routine bloodwork, and your headache log or diary entries. You can also upload these securely via our digital patient portal prior to arrival.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 dark:text-white text-base">
+            <span>Can I consult with a specialist via Tele-Neurology before traveling?</span>
+            <span class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-200/80 dark:border-slate-800 pt-4">
+            Yes! We offer HIPAA-compliant video tele-neurology consultations for patients across Washington and neighboring states. Our neurologists can conduct comprehensive clinical history intakes, review imaging remotely, prescribe preventative therapies, and schedule in-person infusion suites or nerve blocks as needed.
+          </p>
+        </details>
+
+        <details class="group p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 dark:text-white text-base">
+            <span>How fast can I be seen if I am experiencing an acute intractable flare?</span>
+            <span class="ml-4 flex-shrink-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-200/80 dark:border-slate-800 pt-4">
+            We reserve same-day and 24-hour priority acute slots specifically for status migrainosus, severe cluster headache bursts, and acute concussive episodes to help patients avoid crowded emergency departments. Call our urgent triage desk directly at +1 (800) 555-NEURO.
+          </p>
+        </details>
+
+      </div>
+
+      <!-- High-Conversion VIP Appointment CTA Banner -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-teal-950 to-slate-900 text-white p-8 sm:p-12 lg:p-16 border border-teal-500/30 shadow-2xl">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-300 text-xs font-bold uppercase tracking-wider mb-4">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Accepting New Patients This Month
+          </span>
+          <h3 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Take the First Step Toward a Life Free from Cephalic Pain
+          </h3>
+          <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed font-normal">
+            Whether you require advanced CGRP biologic infusion, diagnostic video EEG telemetry, or concussion rehabilitation, Seattle's foremost fellowship-trained team is here to guide your recovery.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-8">
+            <button onclick="openBookingModal('General Neurological Consultation')" class="px-7 py-4 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold text-sm shadow-xl shadow-teal-500/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Book In-Person Consultation</span>
+            </button>
+            <a href="contact.html?type=telehealth#appointment-request" class="px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm backdrop-blur-md border border-white/20 transition-all hover:scale-105 flex items-center gap-2">
+              <i data-lucide="video" class="w-4 h-4"></i>
+              <span>Schedule Tele-Neurology Visit</span>
+            </a>
+            <a href="tel:+18005556387" class="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-300 hover:text-teal-400 font-semibold px-4 py-2 transition-colors">
+              <i data-lucide="phone-call" class="w-4 h-4 text-teal-400"></i>
+              <span>Urgent Hotline: +1 (800) 555-NEURO</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Appointment Booking Modal Popup -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center">
+          <i data-lucide="calendar-plus" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Schedule Neurological Visit</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Board-certified neurologist appointment reservation</p>
+        </div>
+      </div>
+
+      <form id="appointmentBookingForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Select Neurologist</label>
+          <select id="modalDoctorSelect" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+            <option value="">Any Available Specialist</option>
+            <option value="vance">Dr. Marcus Vance, MD (Headache Chief)</option>
+            <option value="rostova">Dr. Alexander Rostov, MD, PhD (Concussion & TBI)</option>
+            <option value="hayes">Dr. Julian Hayes, MD (EEG & Neurophysiology)</option>
+            <option value="chawla">Dr. Priya Chawla, MD (Botox & Nerve Blocks)</option>
+            <option value="wu">Dr. Kenneth Wu, MD (Pediatric Neurology)</option>
+            <option value="lin">Dr. Sarah Lin, MD (Neuro-Ophthalmology)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Preferred Date</label>
+            <input type="date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Visit Type</label>
+            <select class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+              <option>In-Person Consultation</option>
+              <option>Tele-Neurology Video</option>
+              <option>Urgent Infusion Slot</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Patient Full Name</label>
+          <input type="text" name="fullName" placeholder="Sarah Jenkins" required minlength="2" pattern="^[a-zA-Z\s\.\'-]{2,}$" title="Patient Full Name must be at least 2 letters" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Email Address</label>
+            <input type="email" placeholder="sarah@example.com" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Phone Number <span class="text-rose-500">* (10 digits)</span></label>
+            <input type="tel" name="phone" placeholder="10-digit number e.g. 5550001234" required pattern="[0-9]{10}" minlength="10" maxlength="10" title="Phone number must be exactly 10 digits" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Brief Description of Symptoms / Triggers</label>
+          <textarea rows="3" name="symptoms" placeholder="Describe symptoms and treatment history..." required minlength="2" title="Please enter at least 2 characters describing symptoms / triggers" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-lg shadow-teal-600/30 transition-all">
+          Confirm Appointment Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Primary Footer (RheumaCare Style) -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Brand & Social Media -->
+        <div class="lg:col-span-4 md:col-span-6 space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-3 group">
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 flex-shrink-0 group-hover:scale-105 transition-transform drop-shadow-sm">
+            <div>
+              <span class="text-xl font-extrabold tracking-tight text-white">
+                Neuro<span class="text-teal-400">Care</span>
+              </span>
+              <span class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Neurology &amp; Headache Clinic</span>
+            </div>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            A dedicated clinical neurology &amp; headache care center helping people move, think and feel better — through expert diagnosis, modern treatments, and genuinely compassionate support.
+          </p>
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Explore -->
+        <div class="lg:col-span-2 col-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Explore</h5>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="index.html" class="hover:text-teal-400 transition-colors">Home 1</a></li>
+            <li><a href="index-2.html" class="hover:text-teal-400 transition-colors">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-teal-400 transition-colors">About Us</a></li>
+            <li><a href="doctors.html" class="hover:text-teal-400 transition-colors">Doctors</a></li>
+            <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+            <li><a href="pricing.html" class="hover:text-teal-400 transition-colors">Pricing</a></li>
+            <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Care & Services -->
+        <div class="lg:col-span-3 col-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Care &amp; Services</h5>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Migraine &amp; Cluster Headaches</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">CGRP Infusion Therapy Suites</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">PREEMPT Protocol Botox</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Ambulatory Video EEG</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Concussion &amp; TBI Recovery</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Non-Invasive Neuromodulation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Visit Us -->
+        <div class="lg:col-span-3 md:col-span-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Visit Us</h5>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400 mb-5">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+              <span>742 Evergreen Neuro Medical Center, Suite 400<br>Seattle, WA 98101</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <a href="tel:+18005556387" class="hover:text-teal-400 transition-colors">+1 (800) 555-NEURO</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <a href="mailto:care@neurocareclinic.com" class="hover:text-teal-400 transition-colors">care@neurocareclinic.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <span>Mon–Fri 8:00–18:00 · Sat 9:00–13:00</span>
+            </li>
+          </ul>
+          <a href="contact.html#appointment-request" class="w-full py-2.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-teal-900/30 transition-all hover:scale-[1.02]">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Appointment</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; 2026 NeuroCare Center. All rights reserved.</p>
+        <ul class="flex flex-wrap items-center gap-6">
+          <li><a href="#" data-legal="privacy" class="hover:text-teal-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="#" data-legal="terms" class="hover:text-teal-400 transition-colors">Terms of Service</a></li>
+          <li><a href="#" data-legal="accessibility" class="hover:text-teal-400 transition-colors">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-top" class="rc-back-top" type="button" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

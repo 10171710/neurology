@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Coming Soon - Next-Gen NeuroCare Mobile App | NeuroCare Clinic</title>
+  <meta name="description" content="We are launching our AI-powered Headache Trigger Predictor and real-time Tele-Neurology iOS and Android mobile app. Subscribe for early access.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            neuro: {
+              blue: '#0284c7',
+              cyan: '#06b6d4',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-white min-h-screen flex flex-col justify-between relative overflow-hidden transition-colors duration-300">
+
+  <!-- Unique Mobile Clinical Telemetry Background Image with High-Clarity Dual-Theme Overlays -->
+  <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+    <img src="assets/images/journey/journey-step-4-flare-app.jpg" alt="NeuroCare Mobile App and AI Migraine Predictor Cephalic Telemetry" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-85 dark:opacity-75 transition-all duration-700">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-50/85 via-slate-50/60 to-slate-50/90 dark:from-slate-950/85 dark:via-slate-950/65 dark:to-slate-950/95 transition-colors duration-300"></div>
+  </div>
+
+  <!-- Background decorative glows -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Minimal Header -->
+  <header class="py-6 px-4 sm:px-8 border-b border-slate-200 dark:border-slate-800 relative z-10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-10 h-10 flex-shrink-0 group-hover:scale-105 transition-transform">
+        <span class="text-xl font-extrabold text-slate-900 dark:text-white">
+          Neuro<span class="text-teal-600 dark:text-teal-400">Care</span>
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button type="button" onclick="toggleTheme()" title="Toggle Dark/Light Mode" class="p-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition shadow-sm">
+          <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+          <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-amber-400"></i>
+        </button>
+
+        <button type="button" onclick="toggleRTL()" title="Switch Text Direction" class="px-2.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors flex items-center justify-center">
+          <span class="rtl-indicator">LTR</span>
+        </button>
+        <a href="index.html" class="text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+          <i data-lucide="home" class="w-3.5 h-3.5"></i> Back to Homepage
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Coming Soon Main Content with Live Countdown -->
+  <main class="flex-grow flex items-center justify-center p-4 sm:p-6 py-16 relative z-10 text-center">
+    <div class="max-w-2xl mx-auto space-y-8">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 text-xs font-bold">
+        <i data-lucide="sparkles" class="w-4 h-4"></i> Mobile Clinical Innovation Launch
+      </div>
+
+      <div class="space-y-3">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+          NeuroCare Mobile & <span class="bg-gradient-to-r from-teal-400 to-sky-400 bg-clip-text text-transparent">AI Migraine Predictor</span>
+        </h1>
+        <p class="text-sm sm:text-base text-slate-400 max-w-lg mx-auto leading-relaxed">
+          We are putting continuous cephalic bio-monitoring, barometric pressure warnings, and 1-tap tele-neurology in your pocket.
+        </p>
+      </div>
+
+      <!-- Live Countdown Timer -->
+      <div class="grid grid-cols-4 gap-3 sm:gap-6 max-w-lg mx-auto">
+        <div class="p-4 sm:p-6 rounded-2xl bg-slate-800/80 border border-slate-700 backdrop-blur">
+          <span id="countdownDays" class="block text-2xl sm:text-4xl font-black text-teal-400">42</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase text-slate-400 mt-1">Days</span>
+        </div>
+        <div class="p-4 sm:p-6 rounded-2xl bg-slate-800/80 border border-slate-700 backdrop-blur">
+          <span id="countdownHours" class="block text-2xl sm:text-4xl font-black text-teal-400">18</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase text-slate-400 mt-1">Hours</span>
+        </div>
+        <div class="p-4 sm:p-6 rounded-2xl bg-slate-800/80 border border-slate-700 backdrop-blur">
+          <span id="countdownMinutes" class="block text-2xl sm:text-4xl font-black text-teal-400">24</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase text-slate-400 mt-1">Mins</span>
+        </div>
+        <div class="p-4 sm:p-6 rounded-2xl bg-slate-800/80 border border-slate-700 backdrop-blur">
+          <span id="countdownSeconds" class="block text-2xl sm:text-4xl font-black text-teal-400">55</span>
+          <span class="text-[10px] sm:text-xs font-bold uppercase text-slate-400 mt-1">Secs</span>
+        </div>
+      </div>
+
+      <!-- Notify Me Email Subscription -->
+      <form onsubmit="event.preventDefault(); showToast('You are on the VIP early beta list!', 'success'); this.reset();" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+        <input type="email" placeholder="Enter your email address..." required class="flex-grow px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white text-xs sm:text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+        <button type="submit" class="px-6 py-3 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs sm:text-sm shadow transition-colors">
+          Get VIP Beta Access
+        </button>
+      </form>
+
+      <p class="text-[11px] text-slate-500">
+        Strict HIPAA compliance. We will never share your medical email or health telemetry data.
+      </p>
+
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="py-6 text-center text-xs text-slate-500 border-t border-slate-800 relative z-10">
+    <p>© 2026 NeuroCare Institute LLC. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Live countdown simulation
+    let seconds = 55;
+    let minutes = 24;
+    let hours = 18;
+    let days = 42;
+
+    setInterval(() => {
+      seconds--;
+      if (seconds < 0) {
+        seconds = 59;
+        minutes--;
+        if (minutes < 0) {
+          minutes = 59;
+          hours--;
+          if (hours < 0) {
+            hours = 23;
+            days--;
+          }
+        }
+      }
+      document.getElementById('countdownSeconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+      document.getElementById('countdownMinutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('countdownHours').textContent = hours < 10 ? '0' + hours : hours;
+      document.getElementById('countdownDays').textContent = days;
+    }, 1000);
+  </script>
+</body>
+</html>

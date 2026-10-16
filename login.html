@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Customer Login | NeuroCare Patient Portal</title>
+  <meta name="description" content="Sign in to your secure NeuroCare patient portal to access your headache diary, MRI results, treatment plans, and neurologist messaging.">
+  <meta name="robots" content="noindex,nofollow">
+  
+  <!-- Pre-paint theme + direction check (supports dual themes cleanly) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('neurocare_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (t === 'dark' || (!t && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        var d = localStorage.getItem('neurocare_dir') || localStorage.getItem('clm-dir') || localStorage.getItem('dir');
+        if (d === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e'
+            },
+            neuro: {
+              blue: '#0284c7',
+              cyan: '#06b6d4',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-[#070d14] dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between relative overflow-x-hidden transition-colors duration-300">
+
+  <!-- Unique Digital EEG Telemetry Background Image with High-Clarity Dual-Theme Overlays -->
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <img src="assets/images/dashboard/scan-eeg-report.jpg" alt="Clinical EEG Neuro-Telemetry Report" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-80 dark:opacity-65 transition-all duration-700">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-50/80 via-slate-50/55 to-slate-50/85 dark:from-[#070d14]/85 dark:via-[#070d14]/65 dark:to-[#070d14]/95 transition-colors duration-300"></div>
+  </div>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="fixed top-[-100px] left-[-100px] w-96 h-96 rounded-full bg-teal-500/10 dark:bg-teal-500/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+  <div class="fixed bottom-[-100px] right-[-100px] w-96 h-96 rounded-full bg-sky-500/10 dark:bg-sky-500/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+  <!-- Minimal Top Header: Theme + RTL (NO NAVBAR, NO BACK LINK) -->
+  <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-end relative z-10">
+    <div class="flex items-center gap-2">
+      <!-- RTL / LTR Toggle Button -->
+      <button type="button" onclick="toggleRTL()" title="Switch Text Direction" class="px-2.5 py-1.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-[#0c131a] text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center justify-center shadow-sm">
+        <span class="rtl-indicator">LTR</span>
+      </button>
+
+      <!-- Theme Toggle -->
+      <button type="button" onclick="toggleTheme()" title="Toggle Dark/Light Mode" class="p-2 rounded-xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-[#0c131a] text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition shadow-sm">
+        <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+        <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-amber-500"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Login Card Section -->
+  <main class="flex-1 flex items-center justify-center px-4 py-8 relative z-10">
+    <div class="w-full max-w-md">
+      
+      <!-- Login Card matching clean dual theme container -->
+      <div class="rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-[#0c131a] text-slate-900 dark:text-white relative backdrop-blur-xl transition-colors duration-300">
+        
+        <!-- Centered Brand Logo & Header matching navbar and reference in dual themes -->
+        <div class="text-center mb-6">
+          <a href="index.html" class="inline-flex items-center justify-center gap-3 mb-3 group" title="Return to Home">
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 flex-shrink-0 drop-shadow-sm group-hover:scale-105 transition-transform">
+            <div class="flex flex-col text-left leading-tight">
+              <span class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                Neuro<span class="text-teal-600 dark:text-teal-400">Care</span>
+              </span>
+              <span class="block text-[10px] sm:text-[11px] font-bold uppercase tracking-[.2em] text-teal-600 dark:text-teal-400 mt-0.5">Neurology &amp; Headache Clinic</span>
+            </div>
+          </a>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Customer Login</h1>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1.5">Sign in to manage appointments, care plans &amp; clinic messages.</p>
+        </div>
+
+        <!-- Form Body Container / In-Place Success Target -->
+        <div id="auth-card-body">
+          
+          <!-- Error alert box -->
+          <div id="auth-error-msg" class="hidden mb-4 p-3 rounded-xl bg-rose-500/15 border border-rose-500/40 text-rose-600 dark:text-rose-300 text-xs font-semibold" role="alert"></div>
+
+          <!-- Login Form (Real Auth: Does NOT navigate; updates in-place) -->
+          <form id="customerLoginForm" class="space-y-4" novalidate>
+            <div>
+              <label for="login-email" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">EMAIL ADDRESS</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                </span>
+                <input type="email" id="login-email" name="email" value="sarah@example.com" placeholder="you@example.com" required class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-[#131d27] border border-slate-300 dark:border-slate-700/80 text-sm font-semibold text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="login-pass" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">PASSWORD</label>
+                <a href="#" onclick="handleForgotPassword(event)" class="text-xs font-semibold text-teal-600 dark:text-teal-400 hover:text-teal-500 hover:underline">Forgot password?</a>
+              </div>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
+                  <i data-lucide="lock" class="w-4 h-4"></i>
+                </span>
+                <input type="password" id="login-pass" name="pass" value="password123" placeholder="••••••••" required class="w-full pl-10 pr-10 py-3 rounded-xl bg-slate-50 dark:bg-[#131d27] border border-slate-300 dark:border-slate-700/80 text-sm font-semibold text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors">
+                <button type="button" onclick="togglePassVisibility()" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                  <i data-lucide="eye" class="w-4 h-4" id="passEyeIcon"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs pt-1">
+              <label class="flex items-center gap-2 cursor-pointer text-slate-700 dark:text-slate-300">
+                <input type="checkbox" id="remember" checked class="w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-teal-600 focus:ring-teal-500 bg-slate-50 dark:bg-[#131d27]">
+                <span class="font-medium">Keep me signed in</span>
+              </label>
+              <span class="text-[11px] text-teal-600 dark:text-teal-400 font-semibold flex items-center gap-1">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400"></i> HIPAA Compliant
+              </span>
+            </div>
+
+            <!-- Login CTA: Stays on same page and updates with successful msg -->
+            <button type="submit" id="login-submit-btn" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-extrabold text-sm shadow-lg shadow-teal-600/30 hover:scale-[1.01] active:scale-[0.99] transition-all">
+              <i data-lucide="log-in" class="w-4 h-4"></i>
+              <span>Sign In to Patient Portal</span>
+            </button>
+          </form>
+
+          <!-- Divider -->
+          <div class="relative my-6 text-center">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+            </div>
+            <span class="relative px-3 bg-white dark:bg-[#0c131a] text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">OR CONTINUE WITH</span>
+          </div>
+
+          <!-- Social SSO Buttons -->
+          <div class="grid grid-cols-3 gap-2.5">
+            <button type="button" onclick="handleSSO('Google')" class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-[#131d27] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 dark:hover:bg-slate-800/80 transition text-xs font-bold text-slate-700 dark:text-slate-200 shadow-sm">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3.03h3.86c2.26-2.09 3.56-5.17 3.56-8.9z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3.03c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.12C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.26a7.22 7.22 0 0 1 0-4.52V6.62H1.29a12.01 12.01 0 0 0 0 10.76l3.98-3.12z"/><path fill="#EA4335" d="M12 4.78c1.76 0 3.35.6 4.6 1.79l3.42-3.42C17.94 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.12C6.22 6.89 8.87 4.78 12 4.78z"/></svg>
+              <span>Google</span>
+            </button>
+            <button type="button" onclick="handleSSO('Facebook')" class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-[#131d27] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 dark:hover:bg-slate-800/80 transition text-xs font-bold text-slate-700 dark:text-slate-200 shadow-sm">
+              <svg class="w-4 h-4 fill-[#1877F2]" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </button>
+            <button type="button" onclick="handleSSO('Apple')" class="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-[#131d27] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 dark:hover:bg-slate-800/80 transition text-xs font-bold text-slate-700 dark:text-slate-200 shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.64 1.35-.57.65-1.07 1.71-.93 2.73 1.01.08 2.03-.48 2.65-1.23"/></svg>
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <!-- Footnote Links -->
+          <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800 text-center space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
+            <p>
+              New to NeuroCare? <a href="register.html" class="font-bold text-teal-600 dark:text-teal-400 hover:text-teal-500 hover:underline">Create an account</a>
+            </p>
+            <div class="pt-1 flex items-center justify-center gap-1.5 text-xs text-slate-600 dark:text-slate-400">
+              <i data-lucide="shield" class="w-4 h-4 text-amber-500"></i>
+              <span>Licensed physician or staff?</span>
+              <a href="admin-login.html" class="font-bold text-teal-600 dark:text-teal-400 hover:text-teal-500 hover:underline">Admin login</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Clean, Minimal Footer (NO BIG WEBSITE FOOTER) -->
+  <footer class="py-4 text-center text-xs text-slate-500 dark:text-slate-400 relative z-10">
+    <p>&copy; 2026 NeuroCare Neurology &amp; Headache Clinic. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // REAL AUTHENTICATION SYSTEM (localStorage backed)
+    const USERS_STORAGE_KEY = 'neuro_auth_users';
+
+    function initAuth() {
+      try {
+        let users = [];
+        const stored = localStorage.getItem(USERS_STORAGE_KEY);
+        if (stored) {
+          try { users = JSON.parse(stored); } catch (e) { users = []; }
+        }
+        
+        let updated = false;
+        if (!users.some(u => u.email.toLowerCase() === 'sarah@example.com')) {
+          users.push({
+            name: 'Sarah Jenkins',
+            email: 'sarah@example.com',
+            password: 'password123',
+            role: 'customer',
+            id: '#NC-8924'
+          });
+          updated = true;
+        }
+        if (!users.some(u => u.email.toLowerCase() === 'admin@neurocare.com')) {
+          users.push({
+            name: 'Dr. Marcus Vance, MD',
+            email: 'admin@neurocare.com',
+            password: 'adminpassword123',
+            role: 'admin',
+            id: '#NC-MD-8924',
+            department: 'Headache & Neurovascular Fellowship'
+          });
+          updated = true;
+        }
+        if (updated || !stored) {
+          localStorage.setItem(USERS_STORAGE_KEY, JSON.stringify(users));
+        }
+      } catch (e) {
+        console.warn('localStorage access failed:', e);
+      }
+    }
+    initAuth();
+
+    function getRegisteredUsers() {
+      try {
+        const raw = localStorage.getItem(USERS_STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function findUserByEmail(email) {
+      const users = getRegisteredUsers();
+      const cleanEmail = (email || '').trim().toLowerCase();
+      return users.find(u => u.email.toLowerCase() === cleanEmail);
+    }
+
+    function togglePassVisibility() {
+      const p = document.getElementById('login-pass');
+      const icon = document.getElementById('passEyeIcon');
+      if (p.type === 'password') {
+        p.type = 'text';
+      } else {
+        p.type = 'password';
+      }
+    }
+
+    function handleForgotPassword(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      if (email) {
+        showToast('Password reset link sent to ' + email, 'success');
+      } else {
+        showToast('Please enter your email address in the field above.', 'info');
+        document.getElementById('login-email').focus();
+      }
+    }
+
+    function handleSSO(provider) {
+      showToast(provider + ' SSO sign-in initiated. Redirecting securely...', 'info');
+      setTimeout(() => {
+        simulateLoginSuccess('Sarah Jenkins', 'sarah@example.com', '#NC-8924');
+      }, 700);
+    }
+
+    // REAL AUTHENTICATION LOGIN SUBMIT
+    // DOES NOT NAVIGATE TO ANY OTHER PAGE!
+    // Renders the successful message in-place inside auth-card-body
+    const loginForm = document.getElementById('customerLoginForm');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // STOP NAVIGATION
+
+        const emailInput = document.getElementById('login-email');
+        const passInput = document.getElementById('login-pass');
+        const errBox = document.getElementById('auth-error-msg');
+
+        const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+        const pass = passInput ? passInput.value : '';
+
+        if (errBox) errBox.classList.add('hidden');
+
+        if (!email || !pass) {
+          if (errBox) {
+            errBox.textContent = 'Please enter both your email address and password.';
+            errBox.classList.remove('hidden');
+          }
+          return;
+        }
+
+        const user = findUserByEmail(email);
+
+        if (!user) {
+          if (errBox) {
+            errBox.innerHTML = 'No account found with this email. Please <a href="register.html" class="underline font-bold text-teal-600 dark:text-teal-400">Create an account</a> first with this email.';
+            errBox.classList.remove('hidden');
+          }
+          return;
+        }
+
+        if (user.password !== pass) {
+          if (errBox) {
+            errBox.textContent = 'Incorrect password. Please try again or click Forgot Password.';
+            errBox.classList.remove('hidden');
+          }
+          return;
+        }
+
+        // REAL LOGIN SUCCESS: STAY ON THE SAME PAGE, SHOW SUCCESSFUL MSG
+        simulateLoginSuccess(user.name || user.email, user.email, user.id || '#NC-8924');
+      });
+    }
+
+    function simulateLoginSuccess(name, email, id) {
+      const cardContainer = document.getElementById('auth-card-body');
+      if (cardContainer) {
+        cardContainer.innerHTML = `
+          <div class="py-4 text-center animate-fade-in">
+            <!-- Animated Emerald Success Badge -->
+            <div class="w-16 h-16 mx-auto rounded-full bg-emerald-500/15 dark:bg-emerald-500/20 border border-emerald-500/30 dark:border-emerald-500/40 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-3xl mb-4 shadow-lg shadow-emerald-500/20">
+              <i data-lucide="check-circle-2" class="w-9 h-9"></i>
+            </div>
+            
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/20 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Customer Session Active
+            </div>
+
+            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Login Successful!</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 max-w-xs mx-auto">
+              Welcome back, <strong class="text-slate-900 dark:text-white font-bold">${name}</strong>.
+            </p>
+
+            <!-- Status Box -->
+            <div class="mt-5 p-4 rounded-2xl bg-slate-50 dark:bg-[#131d27] border border-slate-200 dark:border-slate-800 text-left text-xs space-y-2.5 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 dark:text-slate-400 font-semibold">Account Email:</span>
+                <span class="text-slate-900 dark:text-white font-mono font-medium">${email}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 dark:text-slate-400 font-semibold">Account Role:</span>
+                <span class="text-teal-600 dark:text-teal-400 font-bold">Patient / Customer</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 dark:text-slate-400 font-semibold">Patient Record ID:</span>
+                <span class="text-slate-700 dark:text-slate-300 font-mono">${id || '#NC-8924'}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-500 dark:text-slate-400 font-semibold">Session Status:</span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Authenticated (Same Page)
+                </span>
+              </div>
+            </div>
+
+            <!-- In-place Action: Stay on the same page -->
+            <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2.5">
+              <button type="button" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition flex items-center justify-center gap-2" onclick="window.location.reload()">
+                <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Sign in as a different user
+              </button>
+            </div>
+          </div>
+        `;
+        lucide.createIcons();
+      }
+
+      showToast('Login successful! Welcome back, ' + name, 'success');
+    }
+  </script>
+</body>
+</html>

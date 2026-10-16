@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="220" height="50" fill="none">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="50%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="logoPulse" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#a5f3fc" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#ccfbf1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Icon 44x44 -->
+  <g transform="translate(3, 3)">
+    <rect width="44" height="44" rx="12" fill="url(#logoGrad)" />
+    <rect width="44" height="44" rx="12" stroke="white" stroke-opacity="0.2" stroke-width="1.5" />
+    
+    <!-- Brain outline & cross -->
+    <path d="M14 17C14 13.5 17 11 20.5 11C23 11 24 12.5 24 14C24 12.5 25 11 27.5 11C31 11 34 13.5 34 17C34 20.5 31.5 22.5 29 23.5C27 24.3 26 26 26 28H22C22 26 21 24.3 19 23.5C16.5 22.5 14 20.5 14 17Z" 
+          stroke="white" stroke-opacity="0.25" stroke-width="1.75" stroke-linecap="round" fill="none" />
+    <circle cx="20.5" cy="11" r="1.5" fill="#a5f3fc" />
+    <circle cx="27.5" cy="11" r="1.5" fill="#a5f3fc" />
+    <circle cx="14" cy="17" r="1.5" fill="#a5f3fc" />
+    <circle cx="34" cy="17" r="1.5" fill="#a5f3fc" />
+
+    <!-- Pulse line -->
+    <path d="M8 24H16L19 19L22 29L26 15L29 27L32 24H40" 
+          stroke="url(#logoPulse)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="26" cy="15" r="2" fill="#ffffff" />
+  </g>
+
+  <!-- Typography -->
+  <text x="58" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="800" fill="#0f172a" letter-spacing="-0.5">
+    Neuro<tspan fill="#0d9488">Care</tspan>
+  </text>
+  <text x="58" y="41" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="1.2">
+    NEUROLOGY &amp; HEADACHE CLINIC
+  </text>
+</svg>

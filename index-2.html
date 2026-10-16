@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>NeuroTech & Rehab - Advanced Headache Innovation & Tele-Neurology</title>
+  <meta name="description" content="Next-generation neurological care integrating digital headache diaries, remote brainwave neuromodulation, concussion rehabilitation, and virtual neurology visits.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            neuro: {
+              blue: '#0284c7',
+              cyan: '#06b6d4',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Primary Navigation -->
+  <header class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
+          <div>
+            <span class="text-sm font-semibold tracking-tight text-white">
+              Neuro<span class="text-teal-400">Care</span>
+            </span>
+            <span class="block text-sm font-semibold uppercase tracking-wider text-white">Neurology &amp; Headache Clinic</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center gap-1 lg:gap-2">
+          
+          <!-- Home Dropdown (Explicitly Required: Home 1 & Home 2 as dropdown) -->
+          <div class="relative" id="desktopHomeDropdown">
+            <button type="button" class="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-teal-400 hover:text-teal-300 rounded-lg hover:bg-slate-800/80 transition-all">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div id="desktopHomeMenu" class="hidden absolute top-full left-0 w-64 mt-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 z-50">
+              <a href="index.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-sm transition-colors">
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white">Home 1: Clinic Landing</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">General Neurology & Headache</div>
+                </div>
+              </a>
+              <a href="index-2.html" class="flex items-start gap-3 p-2.5 rounded-xl bg-teal-50 dark:bg-slate-800/80 text-teal-700 dark:text-teal-300 font-medium text-sm hover:bg-teal-100/60 transition-colors mt-1">
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white">Home 2: Neuro-Tech & Rehab</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">Concussion, Apps & Telehealth</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- About (No Dropdown) -->
+          <a href="about.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            About
+          </a>
+
+          <!-- Services (No Dropdown) -->
+          <a href="services.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Services
+          </a>
+
+          <!-- Doctors (No Dropdown) -->
+          <a href="doctors.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Doctors
+          </a>
+
+          <!-- Pricing (No Dropdown) -->
+          <a href="pricing.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Pricing
+          </a>
+
+          <!-- Blog (No Dropdown) -->
+          <a href="blog.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Blog
+          </a>
+
+          <!-- Contact (No Dropdown) -->
+          <a href="contact.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Contact
+          </a>
+
+          <!-- Dashboard (No Toggle/Dropdown - Direct Link) -->
+          <a href="dashboard.html" class="px-3 py-2 text-sm font-medium text-teal-400 hover:text-teal-300 rounded-lg hover:bg-slate-800/60 transition-all">
+            Dashboard
+          </a>
+        </nav>
+
+        <!-- Right Side Controls -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          
+          <!-- RTL / LTR Toggle Button -->
+          <button type="button" onclick="toggleRTL()" title="Switch Text Direction (LTR/RTL)" class="px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors flex items-center justify-center">
+            <span class="rtl-indicator">LTR</span>
+          </button>
+
+          <!-- Dark / Light Theme Toggle -->
+          <button type="button" onclick="toggleTheme()" title="Toggle Dark/Light Mode" class="p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors">
+            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-teal-400"></i>
+          </button>
+
+          <!-- Login CTA (One Line) -->
+          <a href="login.html" class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+            <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-xl border border-slate-700 text-slate-200 hover:bg-slate-800">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenu" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm">
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-slate-900 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center">
+              <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+            <span class="font-bold text-lg text-white">NeuroTech</span>
+          </div>
+          <button id="mobileMenuClose" class="p-1.5 rounded-lg text-slate-400 hover:bg-slate-800">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <nav class="mt-6 flex flex-col gap-1">
+          <div>
+            <button id="mobileHomeDropdownBtn" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
+              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home Demos</span>
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div id="mobileHomeDropdownMenu" class="hidden pl-6 pr-2 py-1 flex flex-col gap-1 border-l-2 border-teal-500/30 ml-4 mt-1">
+              <a href="index.html" class="py-2 text-sm text-slate-300 font-medium hover:text-teal-400">Home 1: Clinic Landing</a>
+              <a href="index-2.html" class="py-2 text-sm text-slate-300 font-medium hover:text-teal-400">Home 2: Neuro-Tech & Rehab</a>
+            </div>
+          </div>
+
+          <a href="about.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">About</a>
+          <a href="services.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Services</a>
+          <a href="doctors.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Doctors</a>
+          <a href="pricing.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Pricing</a>
+          <a href="blog.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Blog</a>
+          <a href="contact.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Contact</a>
+          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
+            Dashboard
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+        <a href="login.html" class="w-full text-center py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Neurology & Headache Precision Hero Section -->
+  <section class="relative flex items-center py-16 lg:py-24 lg:min-h-[882px] overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+    <!-- Neural Connectome & Clinical Neuro-Pathways Background Image with High-Clarity Dual-Theme Overlays -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <img src="https://cdn.pixabay.com/photo/2020/03/23/17/04/brain-4961452_1280.jpg" onerror="this.onerror=null;this.src='assets/images/hero/hero-home2-brain.jpg'" alt="Neural Brain Telemetry and Advanced Neurophysiology Monitoring" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-95 transition-all duration-700">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/45 via-slate-50/20 to-slate-50/50 transition-colors duration-300"></div>
+    </div>
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="hero-onimage lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 dark:bg-teal-500/15 border border-teal-500/30 text-teal-700 dark:text-teal-300 text-xs font-bold tracking-wide">
+            <i data-lucide="activity" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i>
+            <span>Neurology &amp; Headache Clinic</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)] leading-[1.12]">
+            Advanced <span class="bg-gradient-to-r from-teal-800 to-sky-800 dark:from-teal-300 dark:to-sky-300 bg-clip-text text-transparent font-black">Headache &amp; Migraine</span> Care with Precision Neuromodulation
+          </h1>
+
+          <p class="text-slate-900 dark:text-slate-100 text-base sm:text-lg leading-relaxed max-w-2xl font-semibold drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
+            Bridging fellowship clinical neurology with advanced headache protocols, continuous EEG telemetry, and ultrasound-guided cranial blocks for refractory migraine, occipital neuralgia, and complex neuropathic recovery.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="openBookingModal('Neurology & Headache Consultation')" class="px-6 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-teal-600/25 transition-all flex items-center gap-2 group">
+              <span>Schedule Headache &amp; Neuro Intake</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+            <a href="dashboard.html" class="px-6 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-950 dark:text-white font-bold shadow-md text-sm sm:text-base transition-colors flex items-center gap-2">
+              <i data-lucide="monitor" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i>
+              <span>Explore Live Telemetry Portal</span>
+            </a>
+          </div>
+
+          <div class="pt-6 grid grid-cols-3 gap-6 border-t border-slate-200 dark:border-slate-800 text-xs sm:text-sm">
+            <div>
+              <span class="block text-2xl font-black text-teal-600 dark:text-teal-400" data-counter data-target="99.2" data-decimals="1" data-suffix="%">99.2%</span>
+              <span class="text-slate-800 dark:text-slate-200 font-bold drop-shadow-sm">Intervention Safety Rate</span>
+            </div>
+            <div>
+              <span class="block text-2xl font-black text-teal-600 dark:text-teal-400" data-counter data-target="15" data-suffix=" min">&lt;15 min</span>
+              <span class="text-slate-800 dark:text-slate-200 font-bold drop-shadow-sm">Target Block Relief Time</span>
+            </div>
+            <div>
+              <span class="block text-2xl font-black text-teal-600 dark:text-teal-400" data-counter data-target="24" data-suffix="/7">24/7</span>
+              <span class="text-slate-800 dark:text-slate-200 font-bold drop-shadow-sm">Attending Staff Coverage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Headache & Neuromonitoring Station -->
+        <div class="lg:col-span-5">
+          <div class="bg-white/95 dark:bg-slate-950/90 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-2xl relative backdrop-blur-md">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+              <div class="flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                <span class="text-xs font-mono text-slate-500 dark:text-slate-400 ml-2">headache-telemetry-v4.io</span>
+              </div>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-teal-500/10 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300 border border-teal-500/30">EEG SYNC ACTIVE</span>
+            </div>
+
+            <!-- Neural Brain Telemetry Visual -->
+            <div class="h-44 w-full rounded-2xl overflow-hidden mt-4 mb-2 card-img-container border border-slate-200 dark:border-slate-800 relative group">
+              <img src="https://cdn.pixabay.com/photo/2020/03/23/17/04/brain-4961452_1280.jpg" onerror="this.onerror=null;this.src='assets/images/hero/hero-home2-brain.jpg'" alt="Neural Brain Telemetry and Advanced Neurophysiology Monitoring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-3">
+                <span class="text-[11px] font-mono text-teal-300 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                  Live Neural Telemetry • Real-time EEG Sync
+                </span>
+              </div>
+            </div>
+
+            <!-- Headache & Neuromonitoring Vital Telemetry -->
+            <div class="py-4 space-y-3.5">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div class="flex justify-between items-center text-xs mb-2">
+                  <span class="text-slate-700 dark:text-slate-300 font-semibold flex items-center gap-1.5">
+                    <i data-lucide="activity" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i> Migraine Severity Index
+                  </span>
+                  <span class="text-teal-600 dark:text-teal-400 font-bold">Moderate (6/10)</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-teal-500 to-teal-400 w-3/5"></div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div class="flex justify-between items-center text-xs mb-2">
+                  <span class="text-slate-700 dark:text-slate-300 font-semibold flex items-center gap-1.5">
+                    <i data-lucide="zap" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i> CGRP Infusion Rate
+                  </span>
+                  <span class="text-teal-600 dark:text-teal-400 font-bold">0.25 mL/min Continuous</span>
+                </div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400">
+                  Infusion: Preservative-free CGRP monoclonal antibody. Zero hemodynamic instability.
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <div class="flex justify-between items-center text-xs mb-2">
+                  <span class="text-slate-700 dark:text-slate-300 font-semibold flex items-center gap-1.5">
+                    <i data-lucide="cpu" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i> Trigeminal Sensory Evoked Potential
+                  </span>
+                  <span class="text-emerald-600 dark:text-emerald-400 font-bold">Latency 1.4ms (Normal)</span>
+                </div>
+                <div class="text-[11px] text-slate-500 dark:text-slate-400">
+                  Continuous sensory pathway monitoring active. Pain signal attenuation: 86%.
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+              <a href="dashboard.html" class="text-xs text-teal-600 dark:text-teal-400 font-bold hover:underline flex items-center gap-1">
+                View Headache Telemetry Console <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1">
+                <i data-lucide="shield-check" class="w-3 h-3 text-teal-500"></i> HIPAA Secured
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Neuro-Tech Innovation Features Grid -->
+  <section class="py-20 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-teal-600 dark:text-teal-400 text-xs font-bold uppercase tracking-wider">Clinical Modernity</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-1">Four Pillars of Digital Headache Medicine</h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
+          Replacing trial-and-error with biometrics, algorithm-guided therapies, and patient-first digital ease.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-3xl glass-card hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <img src="https://images.pexels.com/photos/6473732/pexels-photo-6473732.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Patient logging headache symptoms in a digital diary app" class="w-full h-36 rounded-2xl object-cover mb-5" loading="lazy">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Smart Diary Tracking</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Log aura symptoms, medication timing, and barometric changes directly in your patient portal for automatic doctor review.
+            </p>
+          </div>
+          <a href="dashboard.html" class="mt-6 text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+            Test Diary Feature <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-3xl glass-card hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <img src="https://images.pexels.com/photos/7195310/pexels-photo-7195310.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Neurologist conducting a tele-neurology video consultation" class="w-full h-36 rounded-2xl object-cover mb-5" loading="lazy">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Tele-Neurology Visits</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Consult with board-certified headache specialists from the quiet comfort of your home when driving is unsafe during an attack.
+            </p>
+          </div>
+          <button onclick="openBookingModal()" class="mt-6 text-left text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+            Book Virtual Call <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <div class="p-6 rounded-3xl glass-card hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <img src="https://images.pexels.com/photos/7108362/pexels-photo-7108362.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wearable neurostimulation electrodes for remote neuromodulation" class="w-full h-36 rounded-2xl object-cover mb-5" loading="lazy">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Remote Neuromodulation</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              We prescribe wearable bioelectronic devices (Cefaly, Nerivio, gammaCore) that calm hyperactive trigeminal pain loops.
+            </p>
+          </div>
+          <a href="service-details.html" class="mt-6 text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+            Learn About Devices <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-3xl glass-card hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <img src="https://images.pexels.com/photos/8413178/pexels-photo-8413178.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Staff securing insurance prior-authorization paperwork" class="w-full h-36 rounded-2xl object-cover mb-5" loading="lazy">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Prior-Auth Concierge</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Our specialized legal and clinical team secures insurance approvals for CGRP infusions, Botox, and high-resolution neuro-imaging.
+            </p>
+          </div>
+          <a href="pricing.html" class="mt-6 text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+            Insurance Coverage <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Concussion & Post-TBI Rehabilitation Suite -->
+  <section class="py-20 bg-white dark:bg-slate-900 border-y border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-teal-600 dark:text-teal-400 text-xs font-bold uppercase tracking-wider">Multidisciplinary Concussion Clinic</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
+            Comprehensive Return-to-Learn & Return-to-Play Concussion Recovery
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+            Head trauma requires more than "waiting in a dark room." Our protocol combines computerized vestibular assessment, infrared oculomotor tracking, and progressive aerobic exertion protocols to clear brain fog and persistent post-traumatic headaches.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-lg bg-teal-100 dark:bg-teal-900/50 text-teal-600 mt-0.5"><i data-lucide="check" class="w-4 h-4"></i></div>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300"><strong>Infrared Video Nystagmography (VNG):</strong> Identifies subtle inner ear and vestibular deficits.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-lg bg-teal-100 dark:bg-teal-900/50 text-teal-600 mt-0.5"><i data-lucide="check" class="w-4 h-4"></i></div>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300"><strong>Buffalo Concussion Treadmill Protocol:</strong> Safe, sub-symptom threshold exercise conditioning.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="p-1 rounded-lg bg-teal-100 dark:bg-teal-900/50 text-teal-600 mt-0.5"><i data-lucide="check" class="w-4 h-4"></i></div>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300"><strong>Neurocognitive Computer Testing:</strong> Objective metric benchmarks before athletic or work clearance.</p>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openBookingModal('Dr. Alexander Rostov - Concussion Specialist')" class="px-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow transition-colors">
+              Schedule Concussion Evaluation
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-5">
+          <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-800 card-img-container h-64 sm:h-72">
+            <img src="assets/images/facilities/facility-consultation-hero.jpg" alt="Active Concussion Assessment and Oculomotor Tracking Suite" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-600 dark:text-teal-400 mb-0.5" data-counter data-target="94" data-suffix="%">94%</div>
+              <div class="text-[11px] font-bold text-slate-800 dark:text-slate-200">Symptom Free</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-600 dark:text-teal-400 mb-0.5" data-counter data-target="48" data-suffix=" Hrs">48 Hrs</div>
+              <div class="text-[11px] font-bold text-slate-800 dark:text-slate-200">Acute Triage</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-600 dark:text-teal-400 mb-0.5" data-counter data-target="1200" data-separator="true" data-suffix="+">1,200+</div>
+              <div class="text-[11px] font-bold text-slate-800 dark:text-slate-200">Cleared</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+              <div class="text-2xl sm:text-3xl font-extrabold text-teal-600 dark:text-teal-400 mb-0.5" data-reveal>Zero</div>
+              <div class="text-[11px] font-bold text-slate-800 dark:text-slate-200">Bed Rest</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Prescribed Neuromodulation & Wearable Devices Suite -->
+  <section class="py-20 sm:py-24 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider mb-4">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+          FDA-Cleared Hardware Suite
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Prescribed Neuromodulation &amp; Wearables
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+          Non-pharmacological bio-electronic devices prescribed by our fellowship neurologists to alter pain signaling pathways, halt acute attacks, and reduce baseline frequency.
+        </p>
+      </div>
+
+      <!-- Devices 4-Column Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Device 1: Cefaly Dual -->
+        <div class="group relative rounded-3xl p-6 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">
+                Trigeminal V1
+              </span>
+              <span class="text-xs font-semibold text-slate-400">Class II Medical</span>
+            </div>
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="zap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+              CEFALY Dual®
+            </h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Supraorbital Neurostimulator</p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Sends calibrated micro-impulses to the supratrochlear and supraorbital branches of the trigeminal nerve to desensitize hyperactive migraine generators.
+            </p>
+            <div class="space-y-2 py-3 border-y border-slate-200/80 dark:border-slate-800 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Acute Relief:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">60-Min Program</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Prevention:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">20-Min Daily</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Clinical Reduction:</span>
+                <span class="font-bold text-teal-600 dark:text-teal-400">-59% Days</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 pt-2">
+            <button onclick="openBookingModal('Cefaly Dual Device Rx')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-teal-700 dark:text-teal-300 bg-teal-100/70 dark:bg-teal-950/60 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 transition-all flex items-center justify-center gap-1.5">
+              <span>Request Device Rx</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Device 2: gammaCore Sapphire -->
+        <div class="group relative rounded-3xl p-6 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">
+                Vagus Nerve
+              </span>
+              <span class="text-xs font-semibold text-slate-400">Non-Invasive nVNS</span>
+            </div>
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+              gammaCore™ Sapphire
+            </h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Cervical Vagus Stimulator</p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Handheld neuromodulator applied directly to the neck to inhibit excessive glutamate release and modulate central pain transmission in the brainstem.
+            </p>
+            <div class="space-y-2 py-3 border-y border-slate-200/80 dark:border-slate-800 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Indications:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">Cluster &amp; Migraine</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Dosing:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">2-Min Stimulations</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Abort Response:</span>
+                <span class="font-bold text-teal-600 dark:text-teal-400">14-Min Median</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 pt-2">
+            <button onclick="openBookingModal('gammaCore Sapphire Rx')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-teal-700 dark:text-teal-300 bg-teal-100/70 dark:bg-teal-950/60 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 transition-all flex items-center justify-center gap-1.5">
+              <span>Request Device Rx</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Device 3: Nerivio REN -->
+        <div class="group relative rounded-3xl p-6 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">
+                Upper Arm REN
+              </span>
+              <span class="text-xs font-semibold text-slate-400">Smartphone Synced</span>
+            </div>
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="radio" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+              Nerivio® REN
+            </h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Remote Electrical Neuromodulation</p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Worn discreetly on the upper arm, triggering conditioned pain modulation (CPM) to stimulate endogenous serotonin and noradrenaline pain inhibition.
+            </p>
+            <div class="space-y-2 py-3 border-y border-slate-200/80 dark:border-slate-800 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Treatment:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">45-Min Wearable</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Control:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">iOS / Android App</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Efficacy Rate:</span>
+                <span class="font-bold text-teal-600 dark:text-teal-400">71% Consistent</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 pt-2">
+            <button onclick="openBookingModal('Nerivio REN Device Rx')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-teal-700 dark:text-teal-300 bg-teal-100/70 dark:bg-teal-950/60 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 transition-all flex items-center justify-center gap-1.5">
+              <span>Request Device Rx</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Device 4: Muse S & Bio-Sensing Band -->
+        <div class="group relative rounded-3xl p-6 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 hover:border-teal-500/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">
+                Clinical EEG
+              </span>
+              <span class="text-xs font-semibold text-slate-400">Multi-Channel</span>
+            </div>
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="waves" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+              Muse S™ Sleep EEG
+            </h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Nocturnal Brainwave &amp; PPG Band</p>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              Tracks sleep architecture, slow-wave delta synchronization, and micro-arousals to pinpoint circadian triggers of hypnic headaches.
+            </p>
+            <div class="space-y-2 py-3 border-y border-slate-200/80 dark:border-slate-800 text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Sensors:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">4-Ch EEG + PPG</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Telemetry:</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200">Continuous Cloud</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500 dark:text-slate-400">Correlation:</span>
+                <span class="font-bold text-teal-600 dark:text-teal-400">98% Waveform Match</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 pt-2">
+            <button onclick="openBookingModal('Sleep EEG Telemetry Kit')" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-teal-700 dark:text-teal-300 bg-teal-100/70 dark:bg-teal-950/60 hover:bg-teal-600 hover:text-white dark:hover:bg-teal-600 transition-all flex items-center justify-center gap-1.5">
+              <span>Request Device Rx</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Consultation Callout Bar -->
+      <div class="mt-12 rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-teal-900 to-teal-950 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-teal-300 shrink-0">
+            <i data-lucide="shield-check" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold">Unsure Which Neuromodulator Fits Your Anatomy?</h4>
+            <p class="text-xs sm:text-sm text-teal-200/90 mt-1">Our neurologists evaluate your past drug resistance and insurance coverage to prescribe the exact device protocol.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <button onclick="openBookingModal('Device Evaluation Consultation')" class="px-6 py-3 rounded-xl bg-white text-slate-900 text-xs sm:text-sm font-bold hover:bg-teal-50 transition-colors shadow-lg shadow-black/20">
+            Schedule Device Evaluation
+          </button>
+          <a href="pricing.html" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-bold border border-white/20 transition-colors">
+            Check Insurance
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: The Neuro-Cloud™ 4-Step Virtual Care Pathway -->
+  <section class="py-20 sm:py-24 bg-slate-50 dark:bg-slate-950/70 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider mb-4">
+          Seamless 4-Step Care Model
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          The Virtual Tele-Neurology Journey
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+          From at-home sensor calibration to 24/7 background AI flare protection, experience modern neurological medicine without entering a waiting room.
+        </p>
+      </div>
+
+      <!-- 4 Connected Steps Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="relative rounded-3xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+          <div class="h-44 sm:h-48 w-full overflow-hidden relative">
+            <img src="assets/images/journey/journey-step-1-intake.jpg" alt="Smart Digital Intake & DICOM Ingestion - Patient uploading brain MRI scans" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute top-3 left-3 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-black text-teal-600 dark:text-teal-400 border border-teal-500/20 shadow-sm">
+              01
+            </div>
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur-md">
+              15-Min Intake
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Smart Digital Intake &amp; DICOM Ingestion</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                Upload previous brain MRI/CT scans directly via our zero-loss HIPAA DICOM cloud. Our AI cross-indexes your lifetime symptom log before your doctor review.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80">
+              <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold bg-teal-50 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300">
+                Prior Scans Analyzed
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative rounded-3xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+          <div class="h-44 sm:h-48 w-full overflow-hidden relative">
+            <img src="assets/images/journey/journey-step-2-dispatch.jpg" alt="Bio-Sensor Hardware Dispatch - Neurological wearable kit unboxing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute top-3 left-3 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-black text-teal-600 dark:text-teal-400 border border-teal-500/20 shadow-sm">
+              02
+            </div>
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur-md">
+              48-Hr Courier
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Bio-Sensor Hardware Dispatch</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                A pre-calibrated neuro-diagnostic kit containing prescribed wearable sensors and cellular communication hubs arrives right at your front door.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80">
+              <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold bg-teal-50 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300">
+                Pre-Paired &amp; Ready
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative rounded-3xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+          <div class="h-44 sm:h-48 w-full overflow-hidden relative">
+            <img src="assets/images/journey/journey-step-3-consult.jpg" alt="Neurologist Virtual Consultation - Doctor conducting telehealth appointment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute top-3 left-3 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-black text-teal-600 dark:text-teal-400 border border-teal-500/20 shadow-sm">
+              03
+            </div>
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur-md">
+              45-Min Consult
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Neurologist Virtual Consultation</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                Meet your dedicated board-certified headache physician in high-definition video. We review telemetry, establish your acute plan, and route e-prescriptions.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80">
+              <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold bg-teal-50 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300">
+                Board-Certified MD
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative rounded-3xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+          <div class="h-44 sm:h-48 w-full overflow-hidden relative">
+            <img src="assets/images/journey/journey-step-4-flare-app.jpg" alt="Predictive AI Flare Warning & Chat - Mobile app monitoring barometric pressure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute top-3 left-3 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-black text-teal-600 dark:text-teal-400 border border-teal-500/20 shadow-sm">
+              04
+            </div>
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-900/80 text-white backdrop-blur-md">
+              24/7 AI Shield
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Predictive AI Flare Warning &amp; Chat</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                Our background algorithm tracks weather barometrics and sleep telemetry to dispatch preemptive abortive protocols 24-48 hours before pain begins.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80">
+              <span class="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold bg-teal-50 dark:bg-teal-500/10 text-teal-700 dark:text-teal-300">
+                Continuous Protection
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Action Under Steps -->
+      <div class="mt-12 text-center">
+        <button onclick="openBookingModal('Virtual Care Program')" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-sm shadow-lg shadow-teal-600/25 transition-all">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Start Your Virtual Intake Today</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Digital Headache Diary & Predictive AI Flare Forecaster -->
+  <section class="py-20 sm:py-24 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Content & Capabilities -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            Proprietary Neuro-Forecast Engine
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Predicting Migraine Attacks Before Symptoms Begin
+          </h2>
+          <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+            Most migraine apps only record pain after it occurs. The Neuro-Cloud™ Diary integrates multi-modal telemetry to calculate real-time cortical vulnerability, giving you a 24- to 48-hour head start.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-xl bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="cloud-rain" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white">Micro-Barometric Atmospheric Radar</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Detects rapid atmospheric pressure drops exceeding 0.5 hPa/hr that trigger meningeal vasodilation.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-xl bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white">Biometric Wearable Health Sync</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Syncs directly with Apple Health, Oura, Whoop, and Garmin to correlate slow-wave REM sleep deficits with attack probability.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-xl bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white">Autonomic Nervous Tone &amp; HRV Drift</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Identifies sympathetic hyper-arousal and heart-rate variability declines that mark the prodrome phase 12 hours prior to headache onset.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4 items-center">
+            <a href="dashboard.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
+              <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+              <span>Launch Telemetry Dashboard</span>
+            </a>
+            <span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-4 h-4 text-teal-500"></i>
+              Free with all clinical care memberships
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Glassmorphic Telemetry HUD -->
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-slate-900 via-slate-900 to-teal-950 border border-slate-800 text-white shadow-2xl relative overflow-hidden">
+            
+            <!-- Glow Accents -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Card Header -->
+            <div class="flex items-center justify-between pb-5 border-b border-slate-800 relative z-10">
+              <div class="flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-teal-400 animate-pulse"></div>
+                <span class="text-xs font-mono font-bold tracking-wider uppercase text-slate-300">Live Telemetry Monitor</span>
+              </div>
+              <span class="px-2.5 py-1 rounded-full text-[10px] font-mono bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                PRODROME RADAR
+              </span>
+            </div>
+
+            <!-- Threat Level Meter -->
+            <div class="my-6 p-4 rounded-2xl bg-white/5 border border-white/10 relative z-10">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-xs text-slate-400 font-medium">Predicted Flare Threat (Next 36h)</span>
+                <span class="text-xs font-bold text-teal-400">Moderate Risk (64%)</span>
+              </div>
+              <div class="w-full h-2.5 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full rounded-full bg-gradient-to-r from-teal-400 via-teal-400 to-teal-500 w-[64%]"></div>
+              </div>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Trigger: Severe Barometric Drop (-4.2 hPa)</span>
+                <span class="text-teal-300">Expected: Tonight 22:00</span>
+              </div>
+            </div>
+
+            <!-- Live Telemetry Sensor Grid -->
+            <div class="grid grid-cols-2 gap-3 mb-6 relative z-10">
+              <div class="p-3.5 rounded-xl bg-white/5 border border-white/5">
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-1">
+                  <i data-lucide="gauge" class="w-3.5 h-3.5 text-teal-400"></i>
+                  <span>Atmospheric Pressure</span>
+                </div>
+                <div class="text-lg font-bold text-white font-mono">1011.8 hPa</div>
+                <span class="text-[10px] text-teal-400">Falling 0.8 hPa/hr</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-white/5 border border-white/5">
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-1">
+                  <i data-lucide="heart" class="w-3.5 h-3.5 text-teal-400"></i>
+                  <span>Heart Rate Variability</span>
+                </div>
+                <div class="text-lg font-bold text-white font-mono">38 ms</div>
+                <span class="text-[10px] text-teal-400">Sympathetic Drift</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-white/5 border border-white/5">
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-1">
+                  <i data-lucide="moon" class="w-3.5 h-3.5 text-teal-400"></i>
+                  <span>Slow-Wave Sleep</span>
+                </div>
+                <div class="text-lg font-bold text-white font-mono">42 Min</div>
+                <span class="text-[10px] text-teal-400">35% Below Baseline</span>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-white/5 border border-white/5">
+                <div class="flex items-center gap-2 text-xs text-slate-400 mb-1">
+                  <i data-lucide="zap" class="w-3.5 h-3.5 text-teal-400"></i>
+                  <span>Device Sync</span>
+                </div>
+                <div class="text-lg font-bold text-white font-mono">CEFALY Dual</div>
+                <span class="text-[10px] text-teal-400">Battery 94% · Paired</span>
+              </div>
+            </div>
+
+            <!-- Abortive Prescription Recommendation Pill -->
+            <div class="p-4 rounded-2xl bg-teal-950/80 border border-teal-500/40 flex items-center justify-between gap-4 relative z-10">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center shrink-0">
+                  <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white">Preemptive Abortive Protocol Ready</div>
+                  <div class="text-[11px] text-teal-200">20-min Cefaly session recommended at 18:00 before barometric trough.</div>
+                </div>
+              </div>
+              <button onclick="openBookingModal('AI Telemetry Consultation')" class="px-3 py-1.5 rounded-lg bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold shrink-0 transition-colors">
+                Apply Action
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Latest Clinical Insights from the NeuroCare Blog -->
+  <section class="py-20 sm:py-24 bg-slate-50 dark:bg-slate-950/70 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider mb-4">
+            <i data-lucide="newspaper" class="w-3.5 h-3.5"></i>
+            Neurology Blog
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Latest Clinical Insights
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+            Evidence-based articles from our board-certified neurologists on the science behind headache, concussion, and neuromodulation care.
+          </p>
+        </div>
+        <a href="blog.html" class="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-teal-200 dark:border-teal-500/30 text-teal-600 dark:text-teal-400 text-sm font-bold hover:bg-teal-600 hover:text-white transition-colors">
+          View All Articles <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- 3 Blog Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Blog Card 1 -->
+        <article class="rounded-3xl glass-card overflow-hidden group flex flex-col justify-between">
+          <div>
+            <a href="cgrp-monoclonal-antibodies.html" class="block h-48 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-cgrp-monoclonal.jpg" alt="Understanding CGRP Monoclonal Antibodies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                CGRP Therapeutics
+              </span>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Oct 12, 2026</span>
+                <span>&bull;</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">Dr. Marcus Vance, MD</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-2.5">
+                <a href="cgrp-monoclonal-antibodies.html" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Understanding CGRP Monoclonal Antibodies: A Revolution in Chronic Migraine Prevention</a>
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                How quarterly intravenous infusions target calcitonin gene-related peptide receptors to block neurogenic vasodilation before debilitating pain starts.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="cgrp-monoclonal-antibodies.html" class="text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Card 2 -->
+        <article class="rounded-3xl glass-card overflow-hidden group flex flex-col justify-between">
+          <div>
+            <a href="concussion-active-rehab.html#article-body" class="block h-48 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-concussion-rehab.jpg" alt="Active concussion recovery and rehabilitation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                Concussion Rehab
+              </span>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Sep 28, 2026</span>
+                <span>&bull;</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">Dr. Alexander Rostov, MD</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-2.5">
+                <a href="concussion-active-rehab.html#article-body" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Why Strict Dark Room Rest May Worsen Concussion Recovery: The Active Rehab Shift</a>
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Recent randomized trials prove that sub-symptom aerobic exercise and vestibular re-calibration outperform prolonged cocoon therapy in treating post-TBI headaches.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="concussion-active-rehab.html#article-body" class="text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Card 3 -->
+        <article class="rounded-3xl glass-card overflow-hidden group flex flex-col justify-between">
+          <div>
+            <a href="digital-headache-diaries.html#article-body" class="block h-48 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-digital-diary.jpg" alt="Digital headache diary and health metrics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                Digital Health
+              </span>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Sep 14, 2026</span>
+                <span>&bull;</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">Dr. Julian Hayes, MD</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-2.5">
+                <a href="digital-headache-diaries.html#article-body" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Digital Headache Diaries vs. Memory Recall: How Biometric Logging Fixes Medication Timing</a>
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Patients who track barometric shifts, sleep metrics, and prodromal aura symptoms in real-time abort attacks 3 times faster than retrospective recall approaches.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <a href="digital-headache-diaries.html#article-body" class="text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: NeuroTech Innovation & Insurance Coverage FAQ -->
+  <section class="py-20 sm:py-24 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider mb-4">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          Tele-Neurology Guidance
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-base text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+          Everything you need to know about remote device prescription, insurance prior-authorizations, and digital clinic visits.
+        </p>
+      </div>
+
+      <!-- FAQ Accordion List -->
+      <div class="accordion-container space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/50 dark:bg-slate-950/40">
+          <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center text-slate-900 dark:text-white font-bold text-sm sm:text-base hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+            <span>Are neuromodulation devices (Cefaly, gammaCore, Nerivio) covered by insurance?</span>
+            <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-body px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Yes, many commercial insurers and Medicare Advantage plans provide coverage or reimbursement for FDA-cleared neuromodulation devices, especially for patients who have failed 2 or more oral preventive medications. Our dedicated prior-authorization desk submits clinical peer-to-peer documentation directly. Furthermore, all devices are 100% eligible for FSA/HSA tax-free health savings accounts.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/50 dark:bg-slate-950/40">
+          <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center text-slate-900 dark:text-white font-bold text-sm sm:text-base hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+            <span>How does the at-home sensor kit ship, and is technical setup complicated?</span>
+            <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-body hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Your bio-sensor and wearable kit arrives within 48 hours in sealed, pre-configured packaging. Devices come pre-paired to a private cellular hub or your smartphone via a single QR code. During your first video visit, a clinical biomedical technician guides you step-by-step through electrode placement and comfort calibration.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/50 dark:bg-slate-950/40">
+          <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center text-slate-900 dark:text-white font-bold text-sm sm:text-base hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+            <span>Can I consult with your neurologists if I live outside the state?</span>
+            <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-body hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Yes. Our neurology faculty holds active medical licenses across 42 states through the Interstate Medical Licensure Compact (IMLC). We can conduct telemedicine visits, review external MRI scans, and electronically route device and medication prescriptions directly to your preferred local pharmacy.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/50 dark:bg-slate-950/40">
+          <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center text-slate-900 dark:text-white font-bold text-sm sm:text-base hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+            <span>How does the AI forecaster distinguish between ordinary stress and an attack?</span>
+            <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-body hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Our neural model analyzes multi-variate signal convergence. Rather than looking at heart rate alone, it computes the ratio of nocturnal parasympathetic withdrawal (HRV high-frequency power) combined with ambient micro-barometric shifts and sleep spindle fragmentation. In clinical evaluations, this multi-modal approach achieved an 83.4% accuracy rate in predicting migraine prodromes.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-slate-50/50 dark:bg-slate-950/40">
+          <button class="accordion-header w-full px-6 py-4 text-left flex justify-between items-center text-slate-900 dark:text-white font-bold text-sm sm:text-base hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+            <span>Can virtual care be combined with in-person treatments like Botox or nerve blocks?</span>
+            <i data-lucide="chevron-down" class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-body hidden px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Absolutely. Over 60% of our chronic migraine patients operate on a hybrid model: receiving quarterly PREEMPT protocol Botox or SPG nerve blocks at our medical suites while utilizing at-home Cefaly neuromodulation and continuous digital diary tracking between visits for total cycle control.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Bottom Support Banner -->
+      <div class="mt-10 p-6 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-left">
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white">Have a specific insurance or technical inquiry?</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Our patient care navigators respond within 2 hours during business days.</p>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
+            Contact Support
+          </a>
+          <button onclick="openBookingModal('General Tech Care Inquiry')" class="px-5 py-2.5 rounded-xl bg-teal-600 text-white text-xs font-bold hover:bg-teal-500 transition-colors">
+            Book Appointment
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Interactive Doctor Appointment Modal -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center">
+          <i data-lucide="calendar-plus" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Schedule Neurological Visit</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Board-certified neurologist appointment reservation</p>
+        </div>
+      </div>
+
+      <form id="appointmentBookingForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Select Neurologist</label>
+          <select id="modalDoctorSelect" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+            <option value="">Any Available Specialist</option>
+            <option value="vance">Dr. Marcus Vance, MD (Headache Chief)</option>
+            <option value="rostova">Dr. Alexander Rostov, MD, PhD (Concussion & TBI)</option>
+            <option value="hayes">Dr. Julian Hayes, MD (EEG & Neurophysiology)</option>
+            <option value="chawla">Dr. Priya Chawla, MD (Botox & Nerve Blocks)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Preferred Date</label>
+            <input type="date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Visit Type</label>
+            <select class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+              <option>Tele-Neurology Video Visit</option>
+              <option>In-Person Consultation</option>
+              <option>Urgent Infusion Slot</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Patient Full Name</label>
+          <input type="text" name="fullName" placeholder="Sarah Jenkins" required minlength="2" pattern="^[a-zA-Z\s\.\'-]{2,}$" title="Patient Full Name must be at least 2 letters" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Email Address</label>
+            <input type="email" placeholder="sarah@example.com" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Phone Number <span class="text-rose-500">* (10 digits)</span></label>
+            <input type="tel" name="phone" placeholder="10-digit number e.g. 5550001234" required pattern="[0-9]{10}" minlength="10" maxlength="10" title="Phone number must be exactly 10 digits" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Brief Description of Symptoms / Triggers</label>
+          <textarea rows="3" name="symptoms" placeholder="Describe symptoms, frequency of attacks, and goals..." required minlength="2" title="Please enter at least 2 characters describing symptoms / triggers" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-lg shadow-teal-600/30 transition-all">
+          Confirm Appointment Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Primary Footer (RheumaCare Style) -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Brand & Social Media -->
+        <div class="lg:col-span-4 md:col-span-6 space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-3 group">
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 flex-shrink-0 group-hover:scale-105 transition-transform drop-shadow-sm">
+            <div>
+              <span class="text-xl font-extrabold tracking-tight text-white">
+                Neuro<span class="text-teal-400">Care</span>
+              </span>
+              <span class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Neurology &amp; Headache Clinic</span>
+            </div>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            A dedicated clinical neurology &amp; headache care center helping people move, think and feel better — through expert diagnosis, modern treatments, and genuinely compassionate support.
+          </p>
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Explore -->
+        <div class="lg:col-span-2 col-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Explore</h5>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="index.html" class="hover:text-teal-400 transition-colors">Home 1</a></li>
+            <li><a href="index-2.html" class="hover:text-teal-400 transition-colors">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-teal-400 transition-colors">About Us</a></li>
+            <li><a href="doctors.html" class="hover:text-teal-400 transition-colors">Doctors</a></li>
+            <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+            <li><a href="pricing.html" class="hover:text-teal-400 transition-colors">Pricing</a></li>
+            <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Care & Services -->
+        <div class="lg:col-span-3 col-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Care &amp; Services</h5>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Migraine &amp; Cluster Headaches</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">CGRP Infusion Therapy Suites</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">PREEMPT Protocol Botox</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Ambulatory Video EEG</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Concussion &amp; TBI Recovery</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Non-Invasive Neuromodulation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Visit Us -->
+        <div class="lg:col-span-3 md:col-span-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Visit Us</h5>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400 mb-5">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+              <span>742 Evergreen Neuro Medical Center, Suite 400<br>Seattle, WA 98101</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <a href="tel:+18005556387" class="hover:text-teal-400 transition-colors">+1 (800) 555-NEURO</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <a href="mailto:care@neurocareclinic.com" class="hover:text-teal-400 transition-colors">care@neurocareclinic.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <span>Mon–Fri 8:00–18:00 · Sat 9:00–13:00</span>
+            </li>
+          </ul>
+          <a href="contact.html#appointment-request" class="w-full py-2.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-teal-900/30 transition-all hover:scale-[1.02]">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Appointment</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; 2026 NeuroCare Center. All rights reserved.</p>
+        <ul class="flex flex-wrap items-center gap-6">
+          <li><a href="#" data-legal="privacy" class="hover:text-teal-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="#" data-legal="terms" class="hover:text-teal-400 transition-colors">Terms of Service</a></li>
+          <li><a href="#" data-legal="accessibility" class="hover:text-teal-400 transition-colors">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-top" class="rc-back-top" type="button" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

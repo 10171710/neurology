@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Clinical Research Blog & Headache Insights | NeuroCare</title>
+  <meta name="description" content="Discover evidence-based articles on chronic migraine prevention, CGRP inhibitors, concussion recovery protocols, and neurological health written by fellowship neurologists.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            neuro: {
+              blue: '#0284c7',
+              cyan: '#06b6d4',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Primary Navigation -->
+  <header class="sticky top-0 z-40 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
+          <div>
+            <span class="text-sm font-semibold tracking-tight text-white">
+              Neuro<span class="text-teal-400">Care</span>
+            </span>
+            <span class="block text-sm font-semibold uppercase tracking-wider text-white">Neurology &amp; Headache Clinic</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden xl:flex items-center gap-1 lg:gap-2">
+          
+          <!-- Home Dropdown -->
+          <div class="relative" id="desktopHomeDropdown">
+            <button type="button" class="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div id="desktopHomeMenu" class="hidden absolute top-full left-0 w-64 mt-1 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 z-50">
+              <a href="index.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-teal-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-sm transition-colors">
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white">Home 1: Clinic Landing</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">General Neurology & Headache</div>
+                </div>
+              </a>
+              <a href="index-2.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-sm transition-colors mt-1">
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white">Home 2: Neuro-Tech & Rehab</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">Concussion, Apps & Telehealth</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- About (No Dropdown) -->
+          <a href="about.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            About
+          </a>
+
+          <!-- Services (No Dropdown) -->
+          <a href="services.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Services
+          </a>
+
+          <!-- Doctors (No Dropdown) -->
+          <a href="doctors.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Doctors
+          </a>
+
+          <!-- Pricing (No Dropdown) -->
+          <a href="pricing.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Pricing
+          </a>
+
+          <!-- Blog (No Dropdown - Active on this page) -->
+          <a href="blog.html" class="px-3 py-2 text-sm font-bold text-teal-400 bg-slate-800/80 rounded-lg transition-all">
+            Blog
+          </a>
+
+          <!-- Contact (No Dropdown) -->
+          <a href="contact.html" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Contact
+          </a>
+
+          <!-- Dashboard (No Toggle/Dropdown - Direct Link) -->
+          <a href="dashboard.html" class="px-3 py-2 text-sm font-medium text-sky-400 hover:text-sky-300 rounded-lg hover:bg-slate-800/60 transition-all">
+            Dashboard
+          </a>
+        </nav>
+
+        <!-- Right Side Controls -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          
+          <!-- RTL / LTR Toggle Button -->
+          <button type="button" onclick="toggleRTL()" title="Switch Text Direction (LTR/RTL)" class="px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors flex items-center justify-center">
+            <span class="rtl-indicator">LTR</span>
+          </button>
+
+          <!-- Dark / Light Theme Toggle -->
+          <button type="button" onclick="toggleTheme()" title="Toggle Dark/Light Mode" class="p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors">
+            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-amber-400"></i>
+          </button>
+
+          <!-- Single Line Login CTA -->
+          <a href="login.html" class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+            <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-xl border border-slate-700 text-slate-200 hover:bg-slate-800">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenu" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm">
+    <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-slate-900 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-8 h-8 flex-shrink-0">
+            <span class="font-bold text-lg text-white">NeuroCare</span>
+          </div>
+          <button id="mobileMenuClose" class="p-1.5 rounded-lg text-slate-400 hover:bg-slate-800">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <nav class="mt-6 flex flex-col gap-1">
+          <div>
+            <button id="mobileHomeDropdownBtn" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
+              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home Demos</span>
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </button>
+            <div id="mobileHomeDropdownMenu" class="hidden pl-6 pr-2 py-1 flex flex-col gap-1 border-l-2 border-teal-500/30 ml-4 mt-1">
+              <a href="index.html" class="py-2 text-sm text-slate-300 font-medium hover:text-teal-400">Home 1: Clinic Landing</a>
+              <a href="index-2.html" class="py-2 text-sm text-slate-300 font-medium hover:text-teal-400">Home 2: Neuro-Tech & Rehab</a>
+            </div>
+          </div>
+
+          <a href="about.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">About</a>
+          <a href="services.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Services</a>
+          <a href="doctors.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Doctors</a>
+          <a href="pricing.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Pricing</a>
+          <a href="blog.html" class="px-3 py-2.5 rounded-xl font-semibold bg-slate-800 text-teal-400 text-sm">Blog</a>
+          <a href="contact.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Contact</a>
+          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-sky-400 hover:bg-slate-800 text-sm">
+            Dashboard
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+        <a href="login.html" class="w-full text-center py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[580px] lg:min-h-[640px] flex items-center justify-center py-20 lg:py-28 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white overflow-hidden border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+    <!-- Clinical Neuroscience & Research Journal Background Image with High-Clarity Dual-Theme Overlays -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <img src="https://images.pexels.com/photos/5407218/pexels-photo-5407218.jpeg" onerror="this.onerror=null;this.src='assets/images/blog/blog-journal-hero-v2.jpg'" alt="NeuroCare Clinical Neuroscience &amp; Headache Research" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-95 transition-all duration-700">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/45 via-slate-50/20 to-slate-50/50 transition-colors duration-300"></div>
+    </div>
+
+    <div class="hero-onimage relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 sm:space-y-8">
+      
+      <!-- Eyebrow Badge -->
+      <div>
+        <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/95 dark:bg-slate-900/95 border border-teal-500/40 text-xs sm:text-sm font-extrabold text-teal-900 dark:text-teal-200 shadow-sm backdrop-blur-md">Neurology &amp; Headache Journal</span>
+      </div>
+
+      <!-- Main Headline with Highlight -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)] leading-[1.15] max-w-4xl mx-auto">
+        Neuroscience <span class="bg-gradient-to-r from-teal-800 to-sky-800 dark:from-teal-300 dark:to-sky-300 bg-clip-text text-transparent font-black">Insights &amp; Headache Care</span> Breakthroughs
+      </h1>
+
+      <!-- Lead Paragraph -->
+      <p class="text-base sm:text-lg text-slate-900 max-w-2xl mx-auto leading-relaxed font-semibold drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)] text-slate-900">
+        Evidence-based research authored by fellowship neurologists and headache specialists covering CGRP blockers, nerve blocks, intraoperative monitoring, and migraine relief.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <a href="contact.html#appointment-request" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-sm shadow-xl shadow-teal-600/25 transition-all hover:scale-105 active:scale-95">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book a Consultation</span>
+        </a>
+        <a href="#blog-posts" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-950 dark:text-white font-bold shadow-md text-sm backdrop-blur-md border border-slate-300 dark:border-slate-700 transition-all hover:scale-105">
+          <i data-lucide="activity" class="w-4 h-4 text-teal-600 dark:text-teal-400"></i>
+          <span>Explore Therapies</span>
+        </a>
+      </div>
+
+      <!-- Prominent Stat Strip -->
+      <div class="pt-8 sm:pt-10 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)]" data-counter data-target="50" data-suffix="+">50+</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Peer-reviewed guides</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)]" data-counter data-target="12" data-suffix="k+">12k+</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Monthly clinical readers</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-teal-600 dark:text-teal-400 tracking-tight" data-reveal>Weekly</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Neurologist updates</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.85)]" data-counter data-target="100" data-suffix="%">100%</div>
+          <div class="text-xs sm:text-sm text-slate-800 font-bold mt-1 drop-shadow-sm">Evidence-based research</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Filterable & Searchable Blog Content -->
+  <section id="blog-posts" class="scroll-mt-20 py-16 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Filter Tabs & Search Bar -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex flex-wrap gap-2">
+          <button data-filter="all" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-teal-700 text-white hover:bg-teal-800 shadow-sm transition-all">All Articles</button>
+          <button data-filter="migraine" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">Migraine Science</button>
+          <button data-filter="concussion" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">Concussion & TBI</button>
+          <button data-filter="technology" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">Neuro-Tech & Diaries</button>
+          <button data-filter="lifestyle" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all">Triggers & Lifestyle</button>
+        </div>
+
+        <div class="relative w-full lg:w-72">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3 text-slate-400"></i>
+          <input type="text" id="searchDirectoryInput" placeholder="Search medical articles..." class="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs sm:text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Post 1 (Featured) -->
+        <article class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm flex flex-col justify-between" data-category="migraine">
+          <div>
+            <div class="h-56 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-cgrp-monoclonal.jpg" alt="Scientific research and IV therapy for CGRP Monoclonal Antibodies in Migraine Prevention" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                CGRP Therapeutics
+              </span>
+              <span class="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur text-white text-[11px] font-medium px-2 py-0.5 rounded shadow-sm">
+                6 min read
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Oct 12, 2026</span>
+                <span>•</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">By Dr. Marcus Vance, MD</span>
+              </div>
+
+              <h2 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3">
+                <a href="cgrp-monoclonal-antibodies.html">Understanding CGRP Monoclonal Antibodies: A Revolution in Chronic Migraine Prevention</a>
+              </h2>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                How quarterly intravenous infusions target calcitonin gene-related peptide receptors to block neurogenic vasodilation before debilitating pain starts.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-2 flex items-center justify-between text-xs font-bold text-teal-600 dark:text-teal-400">
+            <a href="cgrp-monoclonal-antibodies.html" class="flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-slate-400 font-normal">24 Comments</span>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm flex flex-col justify-between" data-category="concussion">
+          <div>
+            <div class="h-56 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-concussion-rehab.jpg" alt="Athlete undergoing active concussion recovery and physical rehabilitation" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                Concussion Rehab
+              </span>
+              <span class="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur text-white text-[11px] font-medium px-2 py-0.5 rounded shadow-sm">
+                5 min read
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Sep 28, 2026</span>
+                <span>•</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">By Dr. Alexander Rostov, MD</span>
+              </div>
+
+              <h2 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3">
+                <a href="concussion-active-rehab.html#article-body">Why Strict Dark Room Rest May Worsen Concussion Recovery: The Active Rehab Shift</a>
+              </h2>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Recent randomized trials prove that sub-symptom aerobic exercise and vestibular re-calibration outperform prolonged cocoon therapy in treating post-TBI headaches.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-2 flex items-center justify-between text-xs font-bold text-teal-600 dark:text-teal-400">
+            <a href="concussion-active-rehab.html#article-body" class="flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-slate-400 font-normal">18 Comments</span>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm flex flex-col justify-between" data-category="technology">
+          <div>
+            <div class="h-56 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-digital-diary.jpg" alt="Patient and doctor analyzing digital headache diary and health metrics on screen" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                Digital Health
+              </span>
+              <span class="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur text-white text-[11px] font-medium px-2 py-0.5 rounded shadow-sm">
+                8 min read
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Sep 14, 2026</span>
+                <span>•</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">By Dr. Julian Hayes, MD</span>
+              </div>
+
+              <h2 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3">
+                <a href="digital-headache-diaries.html#article-body">Digital Headache Diaries vs. Memory Recall: How Biometric Logging Fixes Medication Timing</a>
+              </h2>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Patients who track barometric shifts, sleep metrics, and prodromal aura symptoms in real-time abort attacks 3 times faster than retrospective recall approaches.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-2 flex items-center justify-between text-xs font-bold text-teal-600 dark:text-teal-400">
+            <a href="digital-headache-diaries.html#article-body" class="flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-slate-400 font-normal">31 Comments</span>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm flex flex-col justify-between" data-category="migraine">
+          <div>
+            <div class="h-56 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-botox-anatomy.jpg" alt="Botox for Chronic Migraine 31-Injection PREEMPT Protocol" class="w-full h-full object-cover object-center" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                Botox Protocols
+              </span>
+              <span class="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur text-white text-[11px] font-medium px-2 py-0.5 rounded shadow-sm">
+                4 min read
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Aug 29, 2026</span>
+                <span>•</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">By Dr. Priya Chawla, MD</span>
+              </div>
+
+              <h2 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3">
+                <a href="botox-preempt-protocol.html">Botox for Chronic Migraine: Anatomy of the 31-Injection PREEMPT Corridor Explained Simply</a>
+              </h2>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                A step-by-step visual anatomical breakdown explaining why injections are placed in specific corrugator, occipital, and trapezius muscle groups made simple.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-2 flex items-center justify-between text-xs font-bold text-teal-600 dark:text-teal-400">
+            <a href="botox-preempt-protocol.html" class="flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-slate-400 font-normal">15 Comments</span>
+          </div>
+        </article>
+
+        <!-- Post 5 -->
+        <article class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm flex flex-col justify-between" data-category="lifestyle">
+          <div>
+            <div class="h-56 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-caffeine-triggers.jpg" alt="Coffee espresso cup representing caffeine triggers and vasoconstriction" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                Trigger Science
+              </span>
+              <span class="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur text-white text-[11px] font-medium px-2 py-0.5 rounded shadow-sm">
+                5 min read
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Aug 11, 2026</span>
+                <span>•</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">By Dr. Marcus Vance, MD</span>
+              </div>
+
+              <h2 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3">
+                <a href="caffeine-rebound-headaches.html#article-body">Caffeine: Cure or Culprit? Untangling Rebound Headaches and Adenosine Receptors</a>
+              </h2>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                When a morning espresso provides vasoconstrictive migraine relief vs. when it creates daily medication-overuse rebound headache cycles.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-2 flex items-center justify-between text-xs font-bold text-teal-600 dark:text-teal-400">
+            <a href="caffeine-rebound-headaches.html#article-body" class="flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-slate-400 font-normal">42 Comments</span>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="filter-item rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-sm flex flex-col justify-between" data-category="technology">
+          <div>
+            <div class="h-56 w-full card-img-container relative overflow-hidden">
+              <img src="assets/images/blog/blog-vagus-nerve.jpg" alt="Non-Invasive Vagus Nerve Stimulation Procedure with Doctor and Patient" class="w-full h-full object-cover object-top" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20 pointer-events-none"></div>
+              <span class="absolute top-4 left-4 bg-teal-600/95 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                Bioelectronics
+              </span>
+              <span class="absolute bottom-4 right-4 bg-slate-900/85 backdrop-blur text-white text-[11px] font-medium px-2 py-0.5 rounded shadow-sm">
+                7 min read
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-slate-400 mb-2">
+                <span>Jul 22, 2026</span>
+                <span>•</span>
+                <span class="text-teal-600 dark:text-teal-400 font-semibold">By Dr. Julian Hayes, MD</span>
+              </div>
+
+              <h2 class="text-lg font-bold text-slate-900 dark:text-white leading-snug mb-3">
+                <a href="vagus-nerve-stimulation.html">Non-Invasive Vagus Nerve Stimulation: Halting Cluster Headache Attacks Drug-Free</a>
+              </h2>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                How handheld electrical gammaCore pulses applied to the cervical neck vagus nerve activate inhibitory GABA pathways to deactivate trigeminal pain loops.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-2 flex items-center justify-between text-xs font-bold text-teal-600 dark:text-teal-400">
+            <a href="vagus-nerve-stimulation.html" class="flex items-center gap-1">
+              Read Clinical Article <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-slate-400 font-normal">27 Comments</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription CTA -->
+  <section class="py-16 bg-gradient-to-br from-teal-600 to-teal-800 text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md p-8 sm:p-12 text-center">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/25 text-xs font-bold uppercase tracking-wider mb-4">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i> NeuroCare Digest
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">Get evidence-based headache insights, every week.</h2>
+        <p class="text-sm sm:text-base text-teal-50/90 max-w-2xl mx-auto leading-relaxed mt-3">
+          Join 12,000+ patients and clinicians receiving concise summaries of new migraine, concussion and neuro-tech research — written by our fellowship neurologists. No spam, unsubscribe anytime.
+        </p>
+        <form onsubmit="event.preventDefault(); showToast('You are subscribed to the NeuroCare Digest!', 'success'); this.reset();" class="mt-6 flex flex-col sm:flex-row items-stretch gap-3 max-w-xl mx-auto">
+          <input type="email" required placeholder="you@example.com" class="flex-1 px-4 py-3 rounded-xl text-slate-900 bg-white placeholder-slate-400 text-sm outline-none focus:ring-2 focus:ring-white/70">
+          <button type="submit" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-lg transition-colors whitespace-nowrap inline-flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i> Subscribe
+          </button>
+        </form>
+        <p class="text-xs text-teal-100/80 mt-4">We respect your privacy. Read our <a href="#" data-legal="privacy" class="underline hover:text-white">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse by Topic -->
+  <section class="py-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-3">Topics</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Browse Articles by Clinical Topic</h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mt-3">Explore our research library grouped by the neurological conditions and technologies we cover most.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="blog-details.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 transition-colors">
+            <i data-lucide="brain" class="w-6 h-6 text-teal-600 dark:text-teal-400"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Migraine Science</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">CGRP biology, gepants, preventive pharmacology and breakthrough migraine research.</p>
+          <span class="mt-4 text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center gap-1 group-hover:underline">Read Blog Details <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+        <a href="concussion-active-rehab.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 transition-colors">
+            <i data-lucide="activity" class="w-6 h-6 text-teal-600 dark:text-teal-400"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Concussion &amp; TBI</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Active rehabilitation, vestibular re-calibration and post-concussion headache recovery.</p>
+          <span class="mt-4 text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center gap-1 group-hover:underline">Read Blog Details <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+        <a href="digital-headache-diaries.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 transition-colors">
+            <i data-lucide="smartphone" class="w-6 h-6 text-teal-600 dark:text-teal-400"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Neuro-Tech &amp; Diaries</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Digital headache diaries, biometric logging and non-invasive neuromodulation devices.</p>
+          <span class="mt-4 text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center gap-1 group-hover:underline">Read Blog Details <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+        <a href="caffeine-rebound-headaches.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-4 transition-colors">
+            <i data-lucide="coffee" class="w-6 h-6 text-teal-600 dark:text-teal-400"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Triggers &amp; Lifestyle</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Caffeine, sleep, diet and environmental triggers that shape headache frequency, duration and severity.</p>
+          <span class="mt-4 text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center gap-1 group-hover:underline">Read Blog Details <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Authors -->
+  <section class="py-16 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-3">Editorial Board</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Meet Our Authors</h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mt-3">Every article is reviewed and authored by board-certified neurologists and fellowship-trained specialists.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <a href="cgrp-monoclonal-antibodies.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 text-center shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-4 ring-4 ring-teal-500/20 shadow group-hover:scale-105 transition-transform">
+              <img src="assets/images/doctors/doctor-marcus-vance.jpg" alt="Portrait of Dr. Marcus Vance, MD" class="face-portrait" loading="lazy">
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Dr. Marcus Vance, MD</h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Chief of Headache Medicine</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">Headache chief and author on CGRP physiology, infusion therapy and migraine prevention.</p>
+          </div>
+          <span class="text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center justify-center gap-1 group-hover:underline">Read latest article <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+        <a href="concussion-active-rehab.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 text-center shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-4 ring-4 ring-teal-500/20 shadow group-hover:scale-105 transition-transform">
+              <img src="assets/images/doctors/doctor-elena-rostova.jpg" alt="Portrait of Dr. Alexander Rostov, MD, PhD" class="face-portrait" loading="lazy">
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Dr. Alexander Rostov, MD, PhD</h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Director of Concussion &amp; TBI Program</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">Leads active concussion rehabilitation and sub-symptom exercise research in athletes.</p>
+          </div>
+          <span class="text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center justify-center gap-1 group-hover:underline">Read latest article <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+        <a href="digital-headache-diaries.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 text-center shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-4 ring-4 ring-teal-500/20 shadow group-hover:scale-105 transition-transform">
+              <img src="assets/images/doctors/doctor-julian-hayes.jpg" alt="Portrait of Dr. Julian Hayes, MD" class="face-portrait" loading="lazy">
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Dr. Julian Hayes, MD</h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Director of Neurophysiology &amp; EEG</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">Specialises in ambulatory EEG, headache analytics and patient-generated biometric data.</p>
+          </div>
+          <span class="text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center justify-center gap-1 group-hover:underline">Read latest article <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+        <a href="botox-preempt-protocol.html#article-body" class="group rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 text-center shadow-sm hover:border-teal-400 dark:hover:border-teal-500 hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-24 h-24 rounded-2xl overflow-hidden mx-auto mb-4 ring-4 ring-teal-500/20 shadow group-hover:scale-105 transition-transform">
+              <img src="assets/images/doctors/doctor-priya-chawla.jpg" alt="Portrait of Dr. Priya Chawla, MD" class="face-portrait" loading="lazy">
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Dr. Priya Chawla, MD</h3>
+            <p class="text-xs text-teal-600 dark:text-teal-400 font-semibold mb-2">Interventional Headache Specialist</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">Interventional headache specialist focused on PREEMPT Botox and nerve-block protocols.</p>
+          </div>
+          <span class="text-xs font-bold text-teal-600 dark:text-teal-400 inline-flex items-center justify-center gap-1 group-hover:underline">Read latest article <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions Section -->
+  <section class="py-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-3">FAQ</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Frequently Asked Questions</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mt-4">How our articles are written, reviewed, and how you can use them. Every piece is rooted in current clinical guidance from our headache and neurology team.</p>
+          <a href="contact.html" class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300">Still have questions? Contact our team <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+        <div class="lg:col-span-7 space-y-4">
+
+          <details class="group bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 text-sm sm:text-base font-semibold text-slate-900 dark:text-white">
+              <span class="bidi-plaintext">Who writes and reviews the NeuroCare blog articles?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 text-teal-600 dark:text-teal-400 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed bidi-plaintext">
+              Every article is written or reviewed by our board-certified neurologists and fellowship-trained specialists. Each piece is fact-checked against current clinical guidelines before it is published.
+            </div>
+          </details>
+
+          <details class="group bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 text-sm sm:text-base font-semibold text-slate-900 dark:text-white">
+              <span class="bidi-plaintext">Is this content a substitute for medical advice?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 text-teal-600 dark:text-teal-400 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed bidi-plaintext">
+              No. Our articles are for education only and cannot replace a personalised evaluation. If you are experiencing new, severe, or sudden headache symptoms, please seek urgent care or book a consultation.
+            </div>
+          </details>
+
+          <details class="group bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 text-sm sm:text-base font-semibold text-slate-900 dark:text-white">
+              <span class="bidi-plaintext">How often do you publish new articles?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 text-teal-600 dark:text-teal-400 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed bidi-plaintext">
+              New evidence summaries, patient guides, and specialist columns are published every month, with urgent guideline updates posted as soon as they are released.
+            </div>
+          </details>
+
+          <details class="group bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 text-sm sm:text-base font-semibold text-slate-900 dark:text-white">
+              <span class="bidi-plaintext">Can I share or republish an article?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 text-teal-600 dark:text-teal-400 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed bidi-plaintext">
+              You may share links freely for personal or educational use. For commercial republication or translation, please request written permission through our contact page.
+            </div>
+          </details>
+
+          <details class="group bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 text-sm sm:text-base font-semibold text-slate-900 dark:text-white">
+              <span class="bidi-plaintext">Do you cover both acute and preventive treatments?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 text-teal-600 dark:text-teal-400 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed bidi-plaintext">
+              Yes. Our library spans acute rescue therapies, preventive medications, CGRP monoclonal antibodies, Botox protocols, neuromodulation, and lifestyle-based approaches to headache care.
+            </div>
+          </details>
+
+          <details class="group bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 text-sm sm:text-base font-semibold text-slate-900 dark:text-white">
+              <span class="bidi-plaintext">How can I suggest a topic or request a correction?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 text-teal-600 dark:text-teal-400 transition-transform group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed bidi-plaintext">
+              We welcome reader feedback. Send topic suggestions or corrections through our contact form and the editorial board will review them for upcoming articles.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Booking Modal Popup -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center">
+          <i data-lucide="calendar-plus" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Schedule Neurological Visit</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Board-certified neurologist appointment reservation</p>
+        </div>
+      </div>
+
+      <form id="appointmentBookingForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Select Neurologist</label>
+          <select id="modalDoctorSelect" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+            <option value="">Any Available Specialist</option>
+            <option value="vance">Dr. Marcus Vance, MD (Headache Chief)</option>
+            <option value="rostova">Dr. Alexander Rostov, MD, PhD (Concussion & TBI)</option>
+            <option value="hayes">Dr. Julian Hayes, MD (EEG & Neurophysiology)</option>
+            <option value="chawla">Dr. Priya Chawla, MD (Botox & Nerve Blocks)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Preferred Date</label>
+            <input type="date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Visit Type</label>
+            <select class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+              <option>In-Person Consultation</option>
+              <option>Tele-Neurology Video</option>
+              <option>Urgent Infusion Slot</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Patient Full Name</label>
+          <input type="text" name="fullName" placeholder="Sarah Jenkins" required minlength="2" pattern="^[a-zA-Z\s\.\'-]{2,}$" title="Patient Full Name must be at least 2 letters" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Email Address</label>
+            <input type="email" placeholder="sarah@example.com" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Phone Number <span class="text-rose-500">* (10 digits)</span></label>
+            <input type="tel" name="phone" placeholder="10-digit number e.g. 5550001234" required pattern="[0-9]{10}" minlength="10" maxlength="10" title="Phone number must be exactly 10 digits" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">Brief Description of Symptoms / Triggers</label>
+          <textarea rows="3" name="symptoms" placeholder="Describe symptoms and treatment history..." required minlength="2" title="Please enter at least 2 characters describing symptoms / triggers" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:ring-2 focus:ring-teal-500 outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-lg shadow-teal-600/30 transition-all">
+          Confirm Appointment Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Primary Footer (RheumaCare Style) -->
+  <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Brand & Social Media -->
+        <div class="lg:col-span-4 md:col-span-6 space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-3 group">
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 flex-shrink-0 group-hover:scale-105 transition-transform drop-shadow-sm">
+            <div>
+              <span class="text-xl font-extrabold tracking-tight text-white">
+                Neuro<span class="text-teal-400">Care</span>
+              </span>
+              <span class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Neurology &amp; Headache Clinic</span>
+            </div>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            A dedicated clinical neurology &amp; headache care center helping people move, think and feel better — through expert diagnosis, modern treatments, and genuinely compassionate support.
+          </p>
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700/80 text-slate-300 hover:bg-teal-600 hover:text-white hover:border-teal-600 hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Explore -->
+        <div class="lg:col-span-2 col-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Explore</h5>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="index.html" class="hover:text-teal-400 transition-colors">Home 1</a></li>
+            <li><a href="index-2.html" class="hover:text-teal-400 transition-colors">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-teal-400 transition-colors">About Us</a></li>
+            <li><a href="doctors.html" class="hover:text-teal-400 transition-colors">Doctors</a></li>
+            <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+            <li><a href="pricing.html" class="hover:text-teal-400 transition-colors">Pricing</a></li>
+            <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Care & Services -->
+        <div class="lg:col-span-3 col-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Care &amp; Services</h5>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400">
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Migraine &amp; Cluster Headaches</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">CGRP Infusion Therapy Suites</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">PREEMPT Protocol Botox</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Ambulatory Video EEG</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Concussion &amp; TBI Recovery</a></li>
+            <li><a href="service-details.html" class="hover:text-teal-400 transition-colors">Non-Invasive Neuromodulation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Visit Us -->
+        <div class="lg:col-span-3 md:col-span-6">
+          <h5 class="text-white font-bold text-sm tracking-wide mb-4">Visit Us</h5>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400 mb-5">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+              <span>742 Evergreen Neuro Medical Center, Suite 400<br>Seattle, WA 98101</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <a href="tel:+18005556387" class="hover:text-teal-400 transition-colors">+1 (800) 555-NEURO</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <a href="mailto:care@neurocareclinic.com" class="hover:text-teal-400 transition-colors">care@neurocareclinic.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="clock" class="w-4 h-4 text-teal-400 shrink-0"></i>
+              <span>Mon–Fri 8:00–18:00 · Sat 9:00–13:00</span>
+            </li>
+          </ul>
+          <a href="contact.html#appointment-request" class="w-full py-2.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-teal-900/30 transition-all hover:scale-[1.02]">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Appointment</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; 2026 NeuroCare Center. All rights reserved.</p>
+        <ul class="flex flex-wrap items-center gap-6">
+          <li><a href="#" data-legal="privacy" class="hover:text-teal-400 transition-colors">Privacy Policy</a></li>
+          <li><a href="#" data-legal="terms" class="hover:text-teal-400 transition-colors">Terms of Service</a></li>
+          <li><a href="#" data-legal="accessibility" class="hover:text-teal-400 transition-colors">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-top" class="rc-back-top" type="button" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

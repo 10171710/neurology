@@ -50,13 +50,13 @@
       <div class="flex items-center justify-between h-20">
         
         <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-3 group">
-          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-11 h-11 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
-          <div>
-            <span class="text-sm font-semibold tracking-tight text-white">
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
+          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
+          <div class="min-w-0">
+            <span class="text-base font-semibold tracking-tight text-white">
               Neuro<span class="text-teal-400">Care</span>
             </span>
-            <span class="block text-sm font-semibold uppercase tracking-wider text-white">Neurology &amp; Headache Clinic</span>
+            
           </div>
         </a>
 
@@ -97,7 +97,7 @@
         </nav>
 
         <!-- Right Side Controls -->
-        <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
           <button type="button" onclick="toggleRTL()" title="Switch Text Direction (LTR/RTL)" class="px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors flex items-center justify-center">
             <span class="rtl-indicator">LTR</span>
           </button>
@@ -106,7 +106,7 @@
             <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-amber-400"></i>
           </button>
           <!-- Login CTA (One Line) -->
-          <a href="login.html" class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
             <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
             <span>Login</span>
           </a>

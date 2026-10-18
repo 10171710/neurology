@@ -687,3 +687,42 @@ function showToast(message, type = 'info') {
     setTimeout(() => toast.remove(), 300);
   }, 3500);
 }
+
+// 10. GLOBAL EMAIL VALIDATION
+// HTML5 type="email" accepts addresses such as "sia@g" (domain without a
+// TLD). Enforce a stricter rule site-wide so incomplete addresses are
+// rejected across every form (contact, newsletter, booking, etc.).
+var EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+
+function isValidEmail(value) {
+  return EMAIL_REGEX.test((value || '').trim());
+}
+
+document.addEventListener('submit', function (e) {
+  var form = e.target;
+  if (!form || form.tagName !== 'FORM') return;
+
+  var emailInputs = form.querySelectorAll('input[type="email"]');
+  for (var i = 0; i < emailInputs.length; i++) {
+    var input = emailInputs[i];
+    var value = input.value.trim();
+    if (value === '' && !input.required) continue;
+    if (!isValidEmail(value)) {
+      e.preventDefault();
+      e.stopPropagation();
+      input.setCustomValidity('Please enter a valid email address (e.g. name@example.com).');
+      input.reportValidity();
+      input.focus();
+      if (typeof showToast === 'function') {
+        showToast('Please enter a valid email address (e.g. name@example.com).', 'info');
+      }
+      return;
+    }
+  }
+}, true);
+
+document.addEventListener('input', function (e) {
+  if (e.target && e.target.type === 'email' && typeof e.target.setCustomValidity === 'function') {
+    e.target.setCustomValidity('');
+  }
+}, true);

@@ -51,17 +51,17 @@
         
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
-          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
+          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
           <div class="min-w-0">
-            <span class="text-base font-semibold tracking-tight text-white">
+            <span class="text-base font-semibold tracking-tight text-white block leading-none">
               Neuro<span class="text-teal-400">Care</span>
             </span>
-            
+            <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Menu -->
-        <nav class="hidden xl:flex items-center gap-1 lg:gap-2">
+        <nav class="hidden lg:flex items-center gap-1 lg:gap-2">
           
           <!-- Home Dropdown -->
           <div class="relative" id="desktopHomeDropdown">
@@ -116,8 +116,8 @@
           </a>
 
           <!-- Dashboard (No Toggle/Dropdown - Direct Link) -->
-          <a href="dashboard.html" class="px-3 py-2 text-sm font-medium text-sky-400 hover:text-sky-300 rounded-lg hover:bg-slate-800/60 transition-all">
-            Dashboard
+          <a href="dashboard.html" class="px-3 lg:px-2.5 xl:px-3.5 py-2.5 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Patient Portal
           </a>
         </nav>
 
@@ -136,13 +136,13 @@
           </button>
 
           <!-- Single Line Login CTA -->
-          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
             <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            <span>Login</span>
+            <span>Patient Portal</span>
           </a>
 
           <!-- Mobile Hamburger -->
-          <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-xl border border-slate-700 text-slate-200 hover:bg-slate-800">
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -156,8 +156,11 @@
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-slate-800">
           <div class="flex items-center gap-2.5">
-            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-9 h-9 flex-shrink-0">
-            <span class="font-semibold text-base text-white">NeuroCare</span>
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 flex-shrink-0">
+            <div>
+              <span class="font-semibold text-base text-white block leading-none">Neuro<span class="text-teal-400">Care</span></span>
+              <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
+            </div>
           </div>
           <button id="mobileMenuClose" class="p-1.5 rounded-lg text-slate-400 hover:bg-slate-800">
             <i data-lucide="x" class="w-5 h-5"></i>
@@ -167,7 +170,7 @@
         <nav class="mt-6 flex flex-col gap-1">
           <div>
             <button id="mobileHomeDropdownBtn" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
-              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home Demos</span>
+              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home</span>
               <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div id="mobileHomeDropdownMenu" class="hidden pl-6 pr-2 py-1 flex flex-col gap-1 border-l-2 border-teal-500/30 ml-4 mt-1">
@@ -182,14 +185,14 @@
           <a href="pricing.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Pricing</a>
           <a href="blog.html" class="px-3 py-2.5 rounded-xl font-semibold bg-slate-800 text-teal-400 text-sm">Blog</a>
           <a href="contact.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Contact</a>
-          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-sky-400 hover:bg-slate-800 text-sm">
-            Dashboard
+          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-slate-300 hover:text-teal-400 hover:bg-slate-800 text-sm">
+            Patient Portal
           </a>
         </nav>
       </div>
 
       <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
-        <a href="login.html" class="w-full text-center py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Login</a>
+        <a href="login.html" class="w-full text-center py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Patient Portal</a>
       </div>
     </div>
   </div>
@@ -199,7 +202,7 @@
     <!-- Unique Concussion Rehab Background Image with High-Clarity Dual-Theme Overlays -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       <img src="assets/images/blog/blog-concussion-rehab.jpg" alt="Athlete undergoing active concussion recovery and neurological rehabilitation" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-95 transition-all duration-700">
-      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/45 via-slate-50/20 to-slate-50/50 transition-colors duration-300"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/85 via-slate-50/75 to-slate-50/85 transition-colors duration-300"></div>
     </div>
 
     <div class="hero-onimage relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 sm:space-y-8">
@@ -277,12 +280,12 @@
             </h2>
 
             <p>
-              Concussion is a functional metabolic injury rather than a structural one. After the initial energy crisis, the brain's demand for glucose outpaces supply. Complete rest was assumed to reduce that demand. In practice, cerebral blood-flow recovery, vestibular recalibration and autonomic balance all improve fastest when the brain is progressively re-challenged within a controlled window â€” not switched off entirely.
+              Concussion is a functional metabolic injury rather than a structural one. After the initial energy crisis, the brain's demand for glucose outpaces supply. Complete rest was assumed to reduce that demand. In practice, cerebral blood-flow recovery, vestibular recalibration and autonomic balance all improve fastest when the brain is progressively re-challenged within a controlled window — not switched off entirely.
             </p>
 
             <div class="p-6 rounded-2xl bg-teal-50 dark:bg-slate-800/80 border-l-4 border-teal-600 italic text-slate-800 dark:text-teal-100 text-sm">
               "Early sub-symptom threshold aerobic exercise initiated soon after injury was associated with a significantly faster time to medical clearance compared with rest until asymptomatic."
-              <span class="block mt-2 font-bold not-italic text-xs text-teal-700 dark:text-teal-400">â€” Journal of the American Medical Association (JAMA) Pediatrics</span>
+              <span class="block mt-2 font-bold not-italic text-xs text-teal-700 dark:text-teal-400">— Journal of the American Medical Association (JAMA) Pediatrics</span>
             </div>
 
             <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white pt-4">
@@ -292,10 +295,10 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
               <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
                 <h4 class="font-bold text-teal-600 dark:text-teal-400 text-sm mb-1">Sub-Symptom Aerobic Exercise</h4>
-                <p class="text-xs text-slate-500 dark:text-slate-400">Using the Buffalo Concussion Treadmill Test, we find the heart-rate threshold at which symptoms first appear, then prescribe training just below it â€” gradually raising the ceiling.</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Using the Buffalo Concussion Treadmill Test, we find the heart-rate threshold at which symptoms first appear, then prescribe training just below it — gradually raising the ceiling.</p>
               </div>
               <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
-                <h4 class="font-bold text-sky-600 dark:text-sky-400 text-sm mb-1">Vestibular Re-Calibration</h4>
+                <h4 class="font-bold text-sky-700 dark:text-sky-300 text-sm mb-1">Vestibular Re-Calibration</h4>
                 <p class="text-xs text-slate-500 dark:text-slate-400">Targeted gaze-stability and visual-motion exercises retrain the inner ear and eyes to cooperate again, resolving the dizziness and motion sensitivity that keep patients in bed.</p>
               </div>
             </div>
@@ -305,11 +308,11 @@
             </h2>
 
             <p>
-              Rather than a binary switch from rest to full activity, recovery follows a graded staircase. Each stage is repeated for at least 24 hours before advancing, and a return of symptoms is a signal to step back â€” not to stop:
+              Rather than a binary switch from rest to full activity, recovery follows a graded staircase. Each stage is repeated for at least 24 hours before advancing, and a return of symptoms is a signal to step back — not to stop:
             </p>
 
             <ul class="list-disc pl-5 space-y-1.5 text-sm">
-              <li>Stage 1: Daily sub-symptom aerobic exercise (10â€“20 minutes).</li>
+              <li>Stage 1: Daily sub-symptom aerobic exercise (10–20 minutes).</li>
               <li>Stage 2: Light, non-contact skill and balance work.</li>
               <li>Stage 3: Moderate training with progressive vestibular and oculomotor loading.</li>
               <li>Stage 4: Full contact practice and return-to-play or return-to-work clearance.</li>
@@ -519,10 +522,10 @@
           <a href="index.html" class="inline-flex items-center gap-3 group">
             <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 flex-shrink-0 group-hover:scale-105 transition-transform drop-shadow-sm">
             <div>
-              <span class="text-base font-semibold tracking-tight text-white">
+              <span class="text-base font-semibold tracking-tight text-white block leading-none">
                 Neuro<span class="text-teal-400">Care</span>
               </span>
-              
+              <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
             </div>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
@@ -569,6 +572,7 @@
             <li><a href="pricing.html" class="hover:text-teal-400 transition-colors">Pricing</a></li>
             <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
             <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a></li>
+            <li><a href="dashboard.html" class="hover:text-teal-400 transition-colors">Patient Portal</a></li>
           </ul>
         </div>
 

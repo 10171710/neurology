@@ -51,17 +51,17 @@
         
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
-          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
+          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
           <div class="min-w-0">
-            <span class="text-base font-semibold tracking-tight text-white">
+            <span class="text-base font-semibold tracking-tight text-white block leading-none">
               Neuro<span class="text-teal-400">Care</span>
             </span>
-            
+            <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Menu -->
-        <nav class="hidden xl:flex items-center gap-1 lg:gap-2">
+        <nav class="hidden lg:flex items-center gap-1 lg:gap-2">
           
           <!-- Home Dropdown -->
           <div class="relative" id="desktopHomeDropdown">
@@ -116,8 +116,8 @@
           </a>
 
           <!-- Dashboard (No Toggle/Dropdown - Direct Link) -->
-          <a href="dashboard.html" class="px-3 py-2 text-sm font-medium text-sky-400 hover:text-sky-300 rounded-lg hover:bg-slate-800/60 transition-all">
-            Dashboard
+          <a href="dashboard.html" class="px-3 lg:px-2.5 xl:px-3.5 py-2.5 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Patient Portal
           </a>
         </nav>
 
@@ -136,13 +136,13 @@
           </button>
 
           <!-- Single Line Login CTA -->
-          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
             <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            <span>Login</span>
+            <span>Patient Portal</span>
           </a>
 
           <!-- Mobile Hamburger -->
-          <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-xl border border-slate-700 text-slate-200 hover:bg-slate-800">
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -156,8 +156,11 @@
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-slate-800">
           <div class="flex items-center gap-2.5">
-            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-9 h-9 flex-shrink-0">
-            <span class="font-semibold text-base text-white">NeuroCare</span>
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 flex-shrink-0">
+            <div>
+              <span class="font-semibold text-base text-white block leading-none">Neuro<span class="text-teal-400">Care</span></span>
+              <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
+            </div>
           </div>
           <button id="mobileMenuClose" class="p-1.5 rounded-lg text-slate-400 hover:bg-slate-800">
             <i data-lucide="x" class="w-5 h-5"></i>
@@ -167,7 +170,7 @@
         <nav class="mt-6 flex flex-col gap-1">
           <div>
             <button id="mobileHomeDropdownBtn" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
-              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home Demos</span>
+              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home</span>
               <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div id="mobileHomeDropdownMenu" class="hidden pl-6 pr-2 py-1 flex flex-col gap-1 border-l-2 border-teal-500/30 ml-4 mt-1">
@@ -182,14 +185,14 @@
           <a href="pricing.html" class="px-3 py-2.5 rounded-xl font-semibold bg-slate-800 text-teal-400 text-sm">Pricing</a>
           <a href="blog.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Blog</a>
           <a href="contact.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Contact</a>
-          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-sky-400 hover:bg-slate-800 text-sm">
-            Dashboard
+          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-slate-300 hover:text-teal-400 hover:bg-slate-800 text-sm">
+            Patient Portal
           </a>
         </nav>
       </div>
 
       <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
-        <a href="login.html" class="w-full text-center py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Login</a>
+        <a href="login.html" class="w-full text-center py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Patient Portal</a>
       </div>
     </div>
   </div>
@@ -199,7 +202,7 @@
     <!-- Clinical Consultations & Surgical Planning Suite Background Image with High-Clarity Dual-Theme Overlays -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       <img src="https://images.pexels.com/photos/35528721/pexels-photo-35528721.jpeg" onerror="this.onerror=null;this.src='assets/images/facilities/pricing-plans-hero.jpg'" alt="NeuroCare Facility Concierge and Surgical Planning Suite" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-95 transition-all duration-700">
-      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/45 via-slate-50/20 to-slate-50/50 transition-colors duration-300"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/85 via-slate-50/75 to-slate-50/85 transition-colors duration-300"></div>
     </div>
 
     <div class="hero-onimage relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 sm:space-y-8">
@@ -259,7 +262,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-teal-600 dark:text-teal-400 text-xs font-bold uppercase tracking-wider">No Hidden Fees</span>
+        <span class="text-teal-700 dark:text-teal-300 text-xs font-bold uppercase tracking-wider">No Hidden Fees</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-1">Care Plans Tailored to Your Recovery</h2>
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
           Whether using commercial insurance with manufacturer copay cards or our concierge self-pay plans, we guarantee complete financial clarity before every appointment.
@@ -267,90 +270,90 @@
       </div>
 
       <!-- 3 Primary Pricing Cards -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
         
         <!-- Plan 1 -->
-        <div class="rounded-3xl p-8 glass-card border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition-all">
-          <div>
+        <div class="rounded-3xl p-6 lg:p-8 glass-card border border-slate-200 dark:border-slate-800 flex flex-col justify-between h-full hover:shadow-xl transition-all">
+          <div class="flex flex-col flex-1">
             <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Initial Assessment</span>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Diagnostic Intake</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Comprehensive 60-min neurology baseline evaluation visit</p>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1 min-h-[3.75rem] flex items-center">Diagnostic Intake</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 min-h-[2.5rem] flex items-center">Comprehensive 60-min neurology baseline evaluation visit</p>
             
-            <div class="my-6">
+            <div class="my-6 min-h-[3rem] flex items-baseline gap-1.5">
               <span class="text-4xl font-black text-slate-900 dark:text-white">$325</span>
               <span class="text-xs text-slate-500 dark:text-slate-400">/ or typical $25-$50 copay</span>
             </div>
 
             <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> 60-min in-person or video consultation</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> 12-nerve cranial neurological exam</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Headache trigger & aura mapping</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Past MRI / CT neuro-imaging review</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Customized acute rescue action plan</li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>60-min in-person or video consultation</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>12-nerve cranial neurological exam</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Headache trigger &amp; aura mapping</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Past MRI / CT neuro-imaging review</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Customized acute rescue action plan</span></li>
             </ul>
           </div>
 
-          <div class="pt-8">
-            <button onclick="openBookingModal('Diagnostic Intake')" class="w-full py-3 rounded-xl border border-teal-600 text-teal-700 dark:text-teal-400 font-bold text-xs sm:text-sm hover:bg-teal-50 dark:hover:bg-slate-800 transition-colors">
+          <div class="pt-8 mt-auto">
+            <button onclick="openBookingModal('Diagnostic Intake')" class="w-full py-3.5 rounded-xl border border-teal-600 text-teal-700 dark:text-teal-400 font-bold text-xs sm:text-sm hover:bg-teal-50 dark:hover:bg-slate-800 transition-colors min-h-[48px] flex items-center justify-center">
               Schedule Diagnostic Intake
             </button>
           </div>
         </div>
 
         <!-- Plan 2: Featured -->
-        <div class="rounded-3xl p-8 glass-card border-2 border-teal-500 relative flex flex-col justify-between shadow-2xl">
+        <div class="rounded-3xl p-6 lg:p-8 glass-card border-2 border-teal-500 relative flex flex-col justify-between h-full shadow-2xl">
           <div class="absolute -top-3.5 right-8 bg-teal-600 text-white text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
             Most Popular
           </div>
-          <div>
+          <div class="flex flex-col flex-1">
             <span class="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">Continuous Support</span>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Chronic Migraine Care</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Comprehensive ongoing relief & CGRP / Botox integration</p>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1 min-h-[3.75rem] flex items-center">Chronic Migraine Care</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 min-h-[2.5rem] flex items-center">Comprehensive ongoing relief &amp; CGRP / Botox integration</p>
             
-            <div class="my-6">
+            <div class="my-6 min-h-[3rem] flex items-baseline gap-1.5">
               <span class="text-4xl font-black text-teal-600 dark:text-teal-400">$650</span>
               <span class="text-xs text-slate-500 dark:text-slate-400">/ quarter (or $0-$35 copay)</span>
             </div>
 
             <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Everything in Diagnostic Intake</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> CGRP/Botox prior-auth concierge</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Automated patient diary tracking sync</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> 24/7 headache nursing team messaging</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Guaranteed priority infusion suite access</li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Everything in Diagnostic Intake</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>CGRP/Botox prior-auth concierge</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Automated patient diary tracking sync</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>24/7 headache nursing team messaging</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Guaranteed priority infusion suite access</span></li>
             </ul>
           </div>
 
-          <div class="pt-8">
-            <button onclick="openBookingModal('Chronic Migraine Management')" class="w-full py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-teal-600/30 transition-all">
+          <div class="pt-8 mt-auto">
+            <button onclick="openBookingModal('Chronic Migraine Management')" class="w-full py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm shadow-lg shadow-teal-600/30 transition-all min-h-[48px] flex items-center justify-center">
               Enroll in Chronic Care
             </button>
           </div>
         </div>
 
         <!-- Plan 3 -->
-        <div class="rounded-3xl p-8 glass-card border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:shadow-xl transition-all">
-          <div>
+        <div class="rounded-3xl p-6 lg:p-8 glass-card border border-slate-200 dark:border-slate-800 flex flex-col justify-between h-full hover:shadow-xl transition-all">
+          <div class="flex flex-col flex-1">
             <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Active Rehabilitation</span>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Concussion & TBI Package</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Multi-week active recovery for post-traumatic headache</p>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1 min-h-[3.75rem] flex items-center">Concussion &amp; TBI Package</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 min-h-[2.5rem] flex items-center">Multi-week active recovery for post-traumatic headache</p>
             
-            <div class="my-6">
+            <div class="my-6 min-h-[3rem] flex items-baseline gap-1.5">
               <span class="text-4xl font-black text-slate-900 dark:text-white">$980</span>
               <span class="text-xs text-slate-500 dark:text-slate-400">/ 6-week program</span>
             </div>
 
             <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Computerized baseline oculomotor VNG testing</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> 6 targeted vestibular rehabilitation sessions</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Sub-threshold aerobic conditioning plan</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> School / Athletic clearance documentation</li>
-              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> Final neurologist discharge clearance</li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Computerized baseline oculomotor VNG testing</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>6 targeted vestibular rehabilitation sessions</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Sub-threshold aerobic conditioning plan</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>School / Athletic clearance documentation</span></li>
+              <li class="flex items-center gap-2.5 min-h-[2.75rem]"><i data-lucide="check" class="w-4 h-4 text-teal-600 shrink-0"></i> <span>Final neurologist discharge clearance</span></li>
             </ul>
           </div>
 
-          <div class="pt-8">
-            <button onclick="openBookingModal('Concussion Recovery Package')" class="w-full py-3 rounded-xl border border-teal-600 text-teal-700 dark:text-teal-400 font-bold text-xs sm:text-sm hover:bg-teal-50 dark:hover:bg-slate-800 transition-colors">
+          <div class="pt-8 mt-auto">
+            <button onclick="openBookingModal('Concussion Recovery Package')" class="w-full py-3.5 rounded-xl border border-teal-600 text-teal-700 dark:text-teal-400 font-bold text-xs sm:text-sm hover:bg-teal-50 dark:hover:bg-slate-800 transition-colors min-h-[48px] flex items-center justify-center">
               Schedule Concussion Program
             </button>
           </div>
@@ -439,42 +442,50 @@
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">No surprise invoices and no fine print. Here is exactly what happens at every step on the financial side of your care.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
 
         <!-- Step 1 -->
-        <div class="relative p-8 rounded-3xl glass-card hover:shadow-xl transition-all">
-          <img src="assets/images/pricing/billing-verify-coverage.jpg" alt="Medical insurance card used to verify patient coverage before the visit" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6" loading="lazy">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5">Verify Coverage</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Share your insurance when you book and our team confirms benefits, copays, prior-authorization needs before you arrive.
-          </p>
+        <div class="relative p-6 lg:p-8 rounded-3xl glass-card flex flex-col justify-between h-full hover:shadow-xl transition-all">
+          <div class="flex flex-col flex-1">
+            <img src="assets/images/pricing/billing-verify-coverage.jpg" alt="Medical insurance card used to verify patient coverage before the visit" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6 shrink-0" loading="lazy">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5 min-h-[2rem] flex items-center">Verify Coverage</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed min-h-[4.5rem] flex-1">
+              Share insurance details when booking. Our team confirms benefits, copay rates, and prior authorization before you arrive.
+            </p>
+          </div>
         </div>
 
         <!-- Step 2 -->
-        <div class="relative p-8 rounded-3xl glass-card hover:shadow-xl transition-all">
-          <img src="assets/images/pricing/billing-written-estimate.jpg" alt="Itemized treatment estimate calculated on a calculator before the appointment" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6" loading="lazy">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5">Get a Written Estimate</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            You receive a clear, itemized estimate up front, with in-network and self-pay rates shown side by side before treatment.
-          </p>
+        <div class="relative p-6 lg:p-8 rounded-3xl glass-card flex flex-col justify-between h-full hover:shadow-xl transition-all">
+          <div class="flex flex-col flex-1">
+            <img src="assets/images/pricing/billing-written-estimate.jpg" alt="Itemized treatment estimate calculated on a calculator before the appointment" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6 shrink-0" loading="lazy">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5 min-h-[2rem] flex items-center">Get a Written Estimate</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed min-h-[4.5rem] flex-1">
+              Receive a clear, itemized estimate in advance, with in-network and self-pay rates detailed before any clinical treatment.
+            </p>
+          </div>
         </div>
 
         <!-- Step 3 -->
-        <div class="relative p-8 rounded-3xl glass-card hover:shadow-xl transition-all">
-          <img src="assets/images/pricing/billing-file-claims.jpg" alt="Neurologist treating a patient while the billing desk files insurance claims" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6" loading="lazy">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5">Treat &amp; File Claims</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Your neurologist delivers the plan while our billing desk files claims, handles pre-authorizations, manages appeals.
-          </p>
+        <div class="relative p-6 lg:p-8 rounded-3xl glass-card flex flex-col justify-between h-full hover:shadow-xl transition-all">
+          <div class="flex flex-col flex-1">
+            <img src="assets/images/pricing/billing-file-claims.jpg" alt="Neurologist treating a patient while the billing desk files insurance claims" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6 shrink-0" loading="lazy">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5 min-h-[2rem] flex items-center">Treat &amp; File Claims</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed min-h-[4.5rem] flex-1">
+              Your neurologist delivers care while our dedicated billing desk files claims, manages pre-auths, and handles appeals.
+            </p>
+          </div>
         </div>
 
         <!-- Step 4 -->
-        <div class="relative p-8 rounded-3xl glass-card hover:shadow-xl transition-all">
-          <img src="assets/images/pricing/billing-flexible-payment.jpg" alt="Patient paying by credit card and smartphone with flexible installment options" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6" loading="lazy">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5">Flexible Payment</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Pay by card, HSA or FSA, or interest-free installments, with financial assistance available for qualifying patients and families on request.
-          </p>
+        <div class="relative p-6 lg:p-8 rounded-3xl glass-card flex flex-col justify-between h-full hover:shadow-xl transition-all">
+          <div class="flex flex-col flex-1">
+            <img src="assets/images/pricing/billing-flexible-payment.jpg" alt="Patient paying by credit card and smartphone with flexible installment options" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6 shrink-0" loading="lazy">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5 min-h-[2rem] flex items-center">Flexible Payment</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed min-h-[4.5rem] flex-1">
+              Pay easily with cards, HSA, FSA, or interest-free installments, with assistance plans available on patient request.
+            </p>
+          </div>
         </div>
 
       </div>
@@ -725,10 +736,10 @@
           <a href="index.html" class="inline-flex items-center gap-3 group">
             <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 flex-shrink-0 group-hover:scale-105 transition-transform drop-shadow-sm">
             <div>
-              <span class="text-base font-semibold tracking-tight text-white">
+              <span class="text-base font-semibold tracking-tight text-white block leading-none">
                 Neuro<span class="text-teal-400">Care</span>
               </span>
-              
+              <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
             </div>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
@@ -775,6 +786,7 @@
             <li><a href="pricing.html" class="hover:text-teal-400 transition-colors">Pricing</a></li>
             <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
             <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a></li>
+            <li><a href="dashboard.html" class="hover:text-teal-400 transition-colors">Patient Portal</a></li>
           </ul>
         </div>
 

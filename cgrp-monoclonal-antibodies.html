@@ -51,17 +51,17 @@
         
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
-          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-10 h-10 sm:w-12 sm:h-12 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
+          <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 group-hover:scale-105 transition-transform drop-shadow-sm flex-shrink-0">
           <div class="min-w-0">
-            <span class="text-base font-semibold tracking-tight text-white">
+            <span class="text-base font-semibold tracking-tight text-white block leading-none">
               Neuro<span class="text-teal-400">Care</span>
             </span>
-            
+            <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Menu -->
-        <nav class="hidden xl:flex items-center gap-1 lg:gap-2">
+        <nav class="hidden lg:flex items-center gap-1 lg:gap-2">
           
           <!-- Home Dropdown -->
           <div class="relative" id="desktopHomeDropdown">
@@ -116,8 +116,8 @@
           </a>
 
           <!-- Dashboard (No Toggle/Dropdown - Direct Link) -->
-          <a href="dashboard.html" class="px-3 py-2 text-sm font-medium text-sky-400 hover:text-sky-300 rounded-lg hover:bg-slate-800/60 transition-all">
-            Dashboard
+          <a href="dashboard.html" class="px-3 lg:px-2.5 xl:px-3.5 py-2.5 text-sm font-medium text-slate-300 hover:text-teal-400 rounded-lg hover:bg-slate-800/60 transition-all">
+            Patient Portal
           </a>
         </nav>
 
@@ -136,13 +136,13 @@
           </button>
 
           <!-- Single Line Login CTA -->
-          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
             <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            <span>Login</span>
+            <span>Patient Portal</span>
           </a>
 
           <!-- Mobile Hamburger -->
-          <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-xl border border-slate-700 text-slate-200 hover:bg-slate-800">
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -156,8 +156,11 @@
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-slate-800">
           <div class="flex items-center gap-2.5">
-            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-9 h-9 flex-shrink-0">
-            <span class="font-semibold text-base text-white">NeuroCare</span>
+            <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 flex-shrink-0">
+            <div>
+              <span class="font-semibold text-base text-white block leading-none">Neuro<span class="text-teal-400">Care</span></span>
+              <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
+            </div>
           </div>
           <button id="mobileMenuClose" class="p-1.5 rounded-lg text-slate-400 hover:bg-slate-800">
             <i data-lucide="x" class="w-5 h-5"></i>
@@ -167,7 +170,7 @@
         <nav class="mt-6 flex flex-col gap-1">
           <div>
             <button id="mobileHomeDropdownBtn" class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-teal-400 hover:bg-slate-800 text-sm">
-              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home Demos</span>
+              <span class="flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home</span>
               <i data-lucide="chevron-down" class="w-4 h-4"></i>
             </button>
             <div id="mobileHomeDropdownMenu" class="hidden pl-6 pr-2 py-1 flex flex-col gap-1 border-l-2 border-teal-500/30 ml-4 mt-1">
@@ -182,14 +185,14 @@
           <a href="pricing.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Pricing</a>
           <a href="blog.html" class="px-3 py-2.5 rounded-xl font-semibold bg-slate-800 text-teal-400 text-sm">Blog</a>
           <a href="contact.html" class="px-3 py-2.5 rounded-xl font-medium text-slate-300 hover:bg-slate-800 text-sm">Contact</a>
-          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-sky-400 hover:bg-slate-800 text-sm">
-            Dashboard
+          <a href="dashboard.html" class="px-3 py-2.5 rounded-xl font-semibold text-slate-300 hover:text-teal-400 hover:bg-slate-800 text-sm">
+            Patient Portal
           </a>
         </nav>
       </div>
 
       <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
-        <a href="login.html" class="w-full text-center py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Login</a>
+        <a href="login.html" class="w-full text-center py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Patient Portal</a>
       </div>
     </div>
   </div>
@@ -199,7 +202,7 @@
     <!-- Unique CGRP Monoclonal Antibodies Background Image with High-Clarity Dual-Theme Overlays -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       <img src="assets/images/blog/blog-cgrp-monoclonal.jpg" alt="CGRP Monoclonal Antibodies and Receptor Antagonism Clinical Study" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 opacity-95 transition-all duration-700">
-      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/45 via-slate-50/20 to-slate-50/50 transition-colors duration-300"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/85 via-slate-50/75 to-slate-50/85 transition-colors duration-300"></div>
     </div>
 
     <div class="hero-onimage relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 sm:space-y-8">
@@ -301,7 +304,7 @@
                 <p class="text-xs text-slate-500 dark:text-slate-400">Administered once every 3 months via a 30-minute IV line. Achieves 100% bio-availability on Day 1 with immediate receptor saturation.</p>
               </div>
               <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
-                <h4 class="font-bold text-sky-600 dark:text-sky-400 text-sm mb-1">Subcutaneous Injectables</h4>
+                <h4 class="font-bold text-sky-700 dark:text-sky-300 text-sm mb-1">Subcutaneous Injectables</h4>
                 <p class="text-xs text-slate-500 dark:text-slate-400">Monthly auto-injector pens (Aimovig, Ajovy, Emgality) self-administered into the thigh or abdomen for steady maintenance.</p>
               </div>
             </div>
@@ -521,10 +524,10 @@
           <a href="index.html" class="inline-flex items-center gap-3 group">
             <img src="assets/images/logo-icon.svg" alt="NeuroCare Logo" class="w-12 h-12 flex-shrink-0 group-hover:scale-105 transition-transform drop-shadow-sm">
             <div>
-              <span class="text-base font-semibold tracking-tight text-white">
+              <span class="text-base font-semibold tracking-tight text-white block leading-none">
                 Neuro<span class="text-teal-400">Care</span>
               </span>
-              
+              <span class="text-[9px] font-bold uppercase tracking-[.2em] text-teal-400 mt-1 block">Patient Portal</span>
             </div>
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
@@ -571,6 +574,7 @@
             <li><a href="pricing.html" class="hover:text-teal-400 transition-colors">Pricing</a></li>
             <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
             <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a></li>
+            <li><a href="dashboard.html" class="hover:text-teal-400 transition-colors">Patient Portal</a></li>
           </ul>
         </div>
 

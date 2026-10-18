@@ -325,19 +325,43 @@ summary {
   color: #0f172a !important;
 }
 .hero-onimage p {
-  color: #334155 !important;
+  color: #0f172a !important;
 }
 .hero-onimage .text-teal-300,
-.hero-onimage .text-teal-400 {
+.hero-onimage .text-teal-400,
+.hero-onimage span.text-teal-600,
+.hero-onimage .text-teal-600,
+.hero-onimage .block.text-teal-600 {
   color: #0f766e !important;
 }
 .hero-onimage .text-slate-200,
 .hero-onimage .text-slate-300,
-.hero-onimage .text-slate-400 {
-  color: #475569 !important;
+.hero-onimage .text-slate-400,
+.hero-onimage span.text-slate-800,
+.hero-onimage span.text-slate-200 {
+  color: #0f172a !important;
+  font-weight: 700 !important;
 }
 .hero-onimage .bg-clip-text {
-  background-image: linear-gradient(to right, #115e59, #0c4a6e) !important;
+  background-image: linear-gradient(to right, #0f766e, #0369a1) !important;
+}
+
+/* ===================================================================
+   Header navigation compaction
+   The desktop menu shows from the lg (1024px) breakpoint. Between
+   1024px and 1279px the row can get tight, so trim link padding and
+   font size to keep every item on a single line without overflow.
+   =================================================================== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  header nav a,
+  header nav button {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+  header nav {
+    gap: 0.125rem !important;
+  }
 }
 
 

@@ -138,7 +138,7 @@
           <!-- Single Line Login CTA -->
           <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
             <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            <span>Patient Portal</span>
+            <span>Login</span>
           </a>
 
           <!-- Mobile Hamburger -->
@@ -192,7 +192,7 @@
       </div>
 
       <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
-        <a href="login.html" class="w-full text-center py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Patient Portal</a>
+        <a href="login.html" class="w-full text-center py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow whitespace-nowrap">Login</a>
       </div>
     </div>
   </div>
@@ -420,13 +420,72 @@
           <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Covered by Most Commercial & Public Health Plans</h3>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 font-bold text-xs text-slate-700 dark:text-slate-300">Blue Cross Blue Shield</div>
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 font-bold text-xs text-slate-700 dark:text-slate-300">Aetna Health</div>
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 font-bold text-xs text-slate-700 dark:text-slate-300">UnitedHealthcare</div>
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 font-bold text-xs text-slate-700 dark:text-slate-300">Cigna</div>
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 font-bold text-xs text-slate-700 dark:text-slate-300">Medicare Part B</div>
-          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 font-bold text-xs text-slate-700 dark:text-slate-300">Kaiser PPO</div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <!-- Blue Cross Blue Shield -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between text-center hover:shadow-lg hover:border-teal-500/40 transition-all group">
+            <div class="h-12 w-full flex items-center justify-center p-1 bg-slate-50 dark:bg-white rounded-xl mb-3">
+              <img src="assets/images/providers/bcbs.svg" alt="Blue Cross Blue Shield Logo" class="max-h-9 max-w-full object-contain" loading="lazy">
+            </div>
+            <span class="font-semibold text-xs text-slate-800 dark:text-slate-200 block">Blue Cross Blue Shield</span>
+            <span class="text-[10px] font-semibold text-teal-600 dark:text-teal-400 mt-1 flex items-center gap-1">
+              <i data-lucide="check" class="w-3 h-3"></i> Tier 1 In-Network
+            </span>
+          </div>
+
+          <!-- Aetna Health -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between text-center hover:shadow-lg hover:border-teal-500/40 transition-all group">
+            <div class="h-12 w-full flex items-center justify-center p-1 bg-slate-50 dark:bg-white rounded-xl mb-3">
+              <img src="assets/images/providers/aetna.svg" alt="Aetna Health Insurance Logo" class="max-h-9 max-w-full object-contain" loading="lazy">
+            </div>
+            <span class="font-semibold text-xs text-slate-800 dark:text-slate-200 block">Aetna Health</span>
+            <span class="text-[10px] font-semibold text-teal-600 dark:text-teal-400 mt-1 flex items-center gap-1">
+              <i data-lucide="check" class="w-3 h-3"></i> Preferred Partner
+            </span>
+          </div>
+
+          <!-- UnitedHealthcare -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between text-center hover:shadow-lg hover:border-teal-500/40 transition-all group">
+            <div class="h-12 w-full flex items-center justify-center p-1 bg-slate-50 dark:bg-white rounded-xl mb-3">
+              <img src="assets/images/providers/unitedhealthcare.svg" alt="UnitedHealthcare Logo" class="max-h-9 max-w-full object-contain" loading="lazy">
+            </div>
+            <span class="font-semibold text-xs text-slate-800 dark:text-slate-200 block">UnitedHealthcare</span>
+            <span class="text-[10px] font-semibold text-teal-600 dark:text-teal-400 mt-1 flex items-center gap-1">
+              <i data-lucide="check" class="w-3 h-3"></i> National Network
+            </span>
+          </div>
+
+          <!-- Cigna -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between text-center hover:shadow-lg hover:border-teal-500/40 transition-all group">
+            <div class="h-12 w-full flex items-center justify-center p-1 bg-slate-50 dark:bg-white rounded-xl mb-3">
+              <img src="assets/images/providers/cigna.svg" alt="Cigna Healthcare Logo" class="max-h-9 max-w-full object-contain" loading="lazy">
+            </div>
+            <span class="font-semibold text-xs text-slate-800 dark:text-slate-200 block">Cigna Health</span>
+            <span class="text-[10px] font-semibold text-teal-600 dark:text-teal-400 mt-1 flex items-center gap-1">
+              <i data-lucide="check" class="w-3 h-3"></i> Fast Prior-Auth
+            </span>
+          </div>
+
+          <!-- Medicare Part B -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between text-center hover:shadow-lg hover:border-teal-500/40 transition-all group">
+            <div class="h-12 w-full flex items-center justify-center p-1 bg-slate-50 dark:bg-white rounded-xl mb-3">
+              <img src="assets/images/providers/medicare.svg" alt="Medicare Part B Logo" class="max-h-9 max-w-full object-contain" loading="lazy">
+            </div>
+            <span class="font-semibold text-xs text-slate-800 dark:text-slate-200 block">Medicare Part B</span>
+            <span class="text-[10px] font-semibold text-teal-600 dark:text-teal-400 mt-1 flex items-center gap-1">
+              <i data-lucide="check" class="w-3 h-3"></i> 100% Diagnostic
+            </span>
+          </div>
+
+          <!-- Kaiser Permanente -->
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-between text-center hover:shadow-lg hover:border-teal-500/40 transition-all group">
+            <div class="h-12 w-full flex items-center justify-center p-1 bg-slate-50 dark:bg-white rounded-xl mb-3">
+              <img src="assets/images/providers/kaiser.svg" alt="Kaiser Permanente Logo" class="max-h-9 max-w-full object-contain" loading="lazy">
+            </div>
+            <span class="font-semibold text-xs text-slate-800 dark:text-slate-200 block">Kaiser PPO</span>
+            <span class="text-[10px] font-semibold text-teal-600 dark:text-teal-400 mt-1 flex items-center gap-1">
+              <i data-lucide="check" class="w-3 h-3"></i> Out-of-Area PPO
+            </span>
+          </div>
         </div>
       </div>
 
@@ -461,7 +520,7 @@
             <img src="assets/images/pricing/billing-written-estimate.jpg" alt="Itemized treatment estimate calculated on a calculator before the appointment" class="w-full aspect-[16/10] object-cover rounded-2xl mb-6 shrink-0" loading="lazy">
             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2.5 min-h-[2rem] flex items-center">Get a Written Estimate</h3>
             <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed min-h-[4.5rem] flex-1">
-              Receive a clear, itemized estimate in advance, with in-network and self-pay rates detailed before any clinical treatment.
+              Receive a clear, itemized estimate in advance, with in-network and self-pay rates detailed before clinical treatment.
             </p>
           </div>
         </div>

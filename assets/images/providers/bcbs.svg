@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50" fill="none">
+  <!-- BCBS Cross & Shield Emblem -->
+  <g transform="translate(6, 7)">
+    <!-- Blue Cross -->
+    <path d="M12 0H24V12H36V24H24V36H12V24H0V12H12V0Z" fill="#005a9c" />
+    <path d="M14 2H22V14H34V22H22V34H14V22H2V14H14V2Z" fill="#0072ce" />
+    <!-- Center Staff of Asclepius / Figure Motif -->
+    <circle cx="18" cy="11" r="2.5" fill="#ffffff" />
+    <path d="M18 14V26M15 18H21M16 23H20" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" />
+  </g>
+  <!-- Text -->
+  <text x="50" y="22" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="700" fill="#005a9c" letter-spacing="-0.3">BlueCross</text>
+  <text x="50" y="35" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#0072ce" letter-spacing="-0.2">BlueShield</text>
+</svg>
+

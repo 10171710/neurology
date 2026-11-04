@@ -25,6 +25,30 @@
   scroll-behavior: smooth;
 }
 
+/* ===================================================================
+   Typography Hierarchy & Readability Rules
+   - 600 font weight for all headings (h1, h2, h3, h4, h5, h6)
+   - 400–550 font weight for paragraph text
+   =================================================================== */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: 600 !important;
+  letter-spacing: -0.015em;
+}
+
+p {
+  font-weight: 450 !important;
+  line-height: 1.65;
+}
+
+p strong,
+p b,
+p .font-bold,
+p .font-semibold {
+  font-weight: 600 !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -313,11 +337,10 @@ summary {
 }
 
 /* ===================================================================
-   Hero Image Readability
+   Hero Image Readability (Matching doctors.html in both themes)
    Keeps on-image hero text (headline, lead copy, stats) dark and
-   readable in BOTH light and dark themes. Scoped to .hero-onimage so
-   cards / other UI surfaces inside the hero keep theme-adaptive
-   colors. Background-image visibility is untouched here.
+   readable in BOTH light and dark themes, exactly like doctors.html
+   on https://neurology-sand.vercel.app/doctors.html.
    =================================================================== */
 .hero-onimage h1,
 .hero-onimage h2,

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 50" width="140" height="50" fill="none">
+  <!-- Cigna Tree of Life / Sunburst -->
+  <g transform="translate(6, 8)">
+    <circle cx="17" cy="17" r="15" fill="#f37021" />
+    <path d="M17 26V13M12 17L17 13L22 17M10 22L17 18L24 22" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="17" cy="8" r="2.2" fill="#0079c1" />
+  </g>
+  <!-- Text -->
+  <text x="44" y="32" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="800" fill="#0079c1" letter-spacing="-0.5">Cigna</text>
+</svg>
+

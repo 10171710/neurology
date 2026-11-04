@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 50" width="170" height="50" fill="none">
+  <!-- Kaiser Permanente Figures Sunburst -->
+  <g transform="translate(6, 8)">
+    <circle cx="17" cy="17" r="16" fill="#007a87" />
+    <circle cx="17" cy="11" r="2.8" fill="#ffffff" />
+    <path d="M11 26C11 21 13 18 17 18C21 18 23 21 23 26" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    <!-- Radiating Care Arc -->
+    <path d="M8 12C9.5 9 13 7 17 7C21 7 24.5 9 26 12" stroke="#67e8f9" stroke-width="1.8" stroke-linecap="round" fill="none" />
+  </g>
+  <!-- Text -->
+  <text x="44" y="22" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" fill="#007a87" letter-spacing="-0.2">KAISER</text>
+  <text x="44" y="34" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="700" fill="#005a63" letter-spacing="0.5">PERMANENTE</text>
+</svg>
+

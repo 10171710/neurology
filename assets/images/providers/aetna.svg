@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 50" width="140" height="50" fill="none">
+  <!-- Aetna emblem -->
+  <g transform="translate(6, 10)">
+    <circle cx="15" cy="15" r="14" fill="#7d3f98" />
+    <path d="M9 20C9 13.5 13 9 17 9C20.5 9 22 11.5 22 14.5C22 18.5 18 20.5 11 20.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    <circle cx="19" cy="12" r="1.5" fill="#f58220" />
+  </g>
+  <!-- Text -->
+  <text x="42" y="32" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="800" fill="#7d3f98" letter-spacing="-0.8">aetna</text>
+</svg>
+

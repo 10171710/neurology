@@ -1,50 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="220" height="50" fill="none">
   <defs>
     <linearGradient id="logoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f766e" />
-      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="55%" stop-color="#0891b2" />
       <stop offset="100%" stop-color="#0284c7" />
     </linearGradient>
-    <linearGradient id="logoPulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#67e8f9" />
-      <stop offset="50%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#a7f3d0" />
-    </linearGradient>
-    <linearGradient id="logoGlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08" />
-    </linearGradient>
-    <filter id="logoPulseGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="0.8" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
 
   <!-- Refined Logo Mark Icon -->
   <g transform="translate(3, 3)">
-    <rect width="44" height="44" rx="13" fill="url(#logoBgGrad)" />
-    <rect width="44" height="44" rx="13" stroke="url(#logoGlowGrad)" stroke-width="1.5" />
+    <rect width="44" height="44" rx="12" fill="url(#logoBgGrad)" />
+    <rect width="44" height="44" rx="12" stroke="white" stroke-opacity="0.25" stroke-width="1.2" />
 
-    <!-- Dual Hemisphere Brain Architecture -->
-    <path d="M22 13.5C19.5 13.5 17.5 14.8 16.5 16.8C14.5 17.2 13 19 13 21.2C13 22.8 13.8 24.2 15 25C14.5 26.2 14.5 27.8 15.5 29C16.8 30.5 19 31.5 22 31.8" 
-          stroke="white" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-    <path d="M26 13.5C28.5 13.5 30.5 14.8 31.5 16.8C33.5 17.2 35 19 35 21.2C35 22.8 34.2 24.2 33 25C33.5 26.2 33.5 27.8 32.5 29C31.2 30.5 29 31.5 26 31.8" 
-          stroke="white" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Subtle Medical Cross Core -->
+    <rect x="21" y="15" width="6" height="18" rx="2.5" fill="white" fill-opacity="0.2" />
+    <rect x="15" y="21" width="18" height="6" rx="2.5" fill="white" fill-opacity="0.2" />
 
-    <!-- Cross Core -->
-    <path d="M22 17.5H26V21.5H30V25.5H26V29.5H22V25.5H18V21.5H22V17.5Z" 
-          fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.4" stroke-width="1" stroke-linejoin="round" />
+    <!-- Left Hemisphere -->
+    <path d="M22 12.5C18 12.5 14.5 15 13.5 18.5C12.5 21 12.8 23.8 14 26C12.8 28.2 13.5 31.2 15.8 33C18 34.5 20.5 34.8 22 34.5" 
+          stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18 18.5C16.8 20.2 17 22.5 18.5 23.8C19.8 24.8 21.2 24.8 22 24.2" 
+          stroke="#a7f3d0" stroke-width="1.6" stroke-linecap="round" />
 
-    <!-- Refined Pulse -->
-    <path d="M7 23.5H15L17.5 19L21 28L24 14L27 30L30.5 20.5L33 23.5H41" 
-          stroke="url(#logoPulseGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#logoPulseGlow)" />
+    <!-- Right Hemisphere -->
+    <path d="M26 12.5C30 12.5 33.5 15 34.5 18.5C35.5 21 35.2 23.8 34 26C35.2 28.2 34.5 31.2 32.2 33C30 34.5 27.5 34.8 26 34.5" 
+          stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M30 18.5C31.2 20.2 31 22.5 29.5 23.8C28.2 24.8 26.8 24.8 26 24.2" 
+          stroke="#a7f3d0" stroke-width="1.6" stroke-linecap="round" />
 
-    <!-- Synapse Nodes -->
-    <circle cx="24" cy="14" r="1.8" fill="#ffffff" />
-    <circle cx="17.5" cy="19" r="1.3" fill="#a5f3fc" />
-    <circle cx="30.5" cy="20.5" r="1.3" fill="#a5f3fc" />
-    <circle cx="21" cy="28" r="1.3" fill="#a5f3fc" />
-    <circle cx="27" cy="30" r="1.3" fill="#a5f3fc" />
+    <!-- Precision Lifeline -->
+    <path d="M9 23.5H15L17.5 19.5L20.5 28L24 14.5L27 30.5L30 20L32.5 23.5H39" 
+          stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+
+    <circle cx="24" cy="14.5" r="2" fill="#ffffff" />
   </g>
 
   <!-- Typography -->

@@ -127,25 +127,25 @@
         <div class="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
           
           <!-- RTL / LTR Toggle Button -->
-          <button type="button" onclick="toggleRTL()" title="Switch Text Direction (LTR/RTL)" class="px-2.5 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors flex items-center justify-center">
+          <button type="button" onclick="toggleRTL()" title="Switch Text Direction (LTR/RTL)" class="h-10 px-3 rounded-xl border border-slate-700 bg-slate-800 text-xs font-bold text-slate-300 hover:bg-slate-700 transition-colors inline-flex items-center justify-center">
             <span class="rtl-indicator">LTR</span>
           </button>
 
           <!-- Dark / Light Theme Toggle -->
-          <button type="button" onclick="toggleTheme()" title="Toggle Dark/Light Mode" class="p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors">
+          <button type="button" onclick="toggleTheme()" title="Toggle Dark/Light Mode" class="h-10 w-10 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors inline-flex items-center justify-center">
             <i data-lucide="moon" class="w-4 h-4 theme-icon-moon"></i>
-            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-amber-400"></i>
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun hidden text-teal-400"></i>
           </button>
 
           <!-- Single Line Login CTA -->
-          <a href="login.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
-            <i data-lucide="user" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          <a href="login.html" class="hidden sm:inline-flex items-center justify-center gap-2 h-10 px-4 sm:px-5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all hover:shadow-lg whitespace-nowrap">
+            <i data-lucide="user" class="w-4 h-4 text-white"></i>
             <span>Login</span>
           </a>
 
           <!-- Mobile Hamburger Menu Button -->
-          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700">
-            <i data-lucide="menu" class="w-6 h-6"></i>
+          <button id="mobileMenuBtn" class="lg:hidden h-10 w-10 rounded-xl border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 inline-flex items-center justify-center">
+            <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
         </div>
       </div>
